@@ -69,4 +69,5 @@ theme: landscape
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:pengisgood/pengisgood.github.com.git
+  repo: git@github.com:pengisgood/pengisgood.github.io.git
+  branch: gh-pages
