@@ -70,4 +70,3 @@ theme: landscape
 deploy:
   type: git
   repo: git@github.com:pengisgood/pengisgood.github.io.git
-  branch: gh-pages
