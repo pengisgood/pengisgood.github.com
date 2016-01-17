@@ -1300,6 +1300,9 @@ pre .javascript .function {
     color: #fff;
   }
 }
+#cnzz_stat_icon_1257186032 {
+  display: none;
+}
 @media screen and (min-width: 768px) {
   #sidebar {
     display: inline;
