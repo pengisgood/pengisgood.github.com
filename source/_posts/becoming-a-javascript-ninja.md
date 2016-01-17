@@ -6,26 +6,28 @@ tags: JavaScript
 
 我努力地训练着想成为大家所说的“JavaScript 忍者”。在这片文章中我将会分享一些迄今为止我学到的比较重要的东西。
 
-![忍者](../img/ninja.jpg)
+![](../img/ninja.jpg)
 
 ## 1. 使用代码约定
 
 代码约定是针对一门特定编程语言的编程规范、实践和方法等一系列指导方针的集合。这些约定通常包含文件组织，缩进，注释，定义，声明，空格，命名，编程实践，编程原则，编程经验法则，架构的最佳实践等。这些是软件结构质量的指导方针。为了帮助提高代码的可读性和软件的可维护性，强烈建议软件开发工程师遵循这些指导方针。
 
+<!--more-->
+
 有一些工具可以帮助你确保你的团队遵循 JavaScript 的代码约定：
 
-| 代码约定工具 | 描述 |
-|------------|-----|
-| JSLint | JSLint 是一个用于查找 JavaScript 程序问题的 JavaScript 程序。它是由 Douglas Crockford 开发的一个代码质量工具。JSLint 会扫描 JavaScript 源码。如果发现问题，它会返回描述问题的信息和在源码中的大概位置。该问题不一定是语法错误，尽管经常确实是。JSLint 也会做一些代码风格和结构的检查。它并不证明你的程序是正确的。它只是从另一个角度帮助发现问题。可以从[这里](www.jslint.com)下载 JSLint。|
-| JSHint | JSHint 是 Anton Kovalyov 从 JSLint 创建的一个分支，因为他相信代码质量工具应该是社区驱动的并且有时候由我们自己决定是否要遵循一些代码约定。因此 JSHint 比 JSLint 更具有可配置性。可以从[这里](www.jshint.com)下载 JSHint。 |
+代码约定工具 | 描述
+:---:|:---
+JSLint | JSLint 是一个用于查找 JavaScript 程序问题的 JavaScript 程序。它是由 Douglas Crockford 开发的一个代码质量工具。JSLint 会扫描 JavaScript 源码。如果发现问题，它会返回描述问题的信息和在源码中的大概位置。该问题不一定是语法错误，尽管经常确实是。JSLint 也会做一些代码风格和结构的检查。它并不证明你的程序是正确的。它只是从另一个角度帮助发现问题。可以从[这里](www.jslint.com)下载 JSLint。
+JSHint | JSHint 是 Anton Kovalyov 从 JSLint 创建的一个分支，因为他相信代码质量工具应该是社区驱动的并且有时候由我们自己决定是否要遵循一些代码约定。因此 JSHint 比 JSLint 更具有可配置性。可以从[这里](www.jshint.com)下载 JSHint。
 
 ## 2. 为代码编写文档
 
 我确信你会很不赖烦的听到别人说你需要为你的代码编写文档。我确信你正在这样做但是有时候不容易发现它的价值，但是如果你创建的注释最终可以形成类似MSDN 或者 Java 文档这样的文档站点，似乎有更多的价值。幸运的是，我们也有帮助我们生成文档的工具：
 
-| 文档生成工具 | 描述 |
-|------------|-----|
-| JsDoc Toolkit |	它是用 JavaScript 编写的一个应用程序，用于根据 JavaScript 源码中的注释自动生成通过模板格式化的多页面的 HTML（或者 XML， JSON，或者其他基于文本文件的）文档。你可以从[这里](http://usejsdoc.org/)下载 JsDoc Toolkit。 |
+文档生成工具 | 描述
+:---:|:---
+JsDoc Toolkit |	它是用 JavaScript 编写的一个应用程序，用于根据 JavaScript 源码中的注释自动生成通过模板格式化的多页面的 HTML（或者 XML， JSON，或者其他基于文本文件的）文档。你可以从[这里](http://usejsdoc.org/)下载 JsDoc Toolkit。
 
 ## 3. 分离关注点
 
@@ -68,9 +70,7 @@ var json = {
 
 // 调用渲染逻辑
 RenderJson(json, template, $('#heroes_tbody'));
-```
 
-``` html
 // DOM where we will insert HTML on rendering
 <table>
     <thead><tr><th>Hero</th></tr></thead>
@@ -203,16 +203,14 @@ require(["parsing"], function(Parsing) {
 ** b) 测试一个未初始化的变量值是否为 `null` **
 
 特殊值 `undefined` 经常和 `null` 混为一谈。部分混淆来自于 `null == undefined` 的值为 `true`。然而，这两个值的用途却不同。未被初始化的变量的默认值为 `undefined`。
-
 ```javascript
 //bad
 var person;
 console.log(person == undefined); //true
 ```
+一般性的建议就是要避免总是使用 `undefined`。
 
-The general recommendation is to avoid using undefined at all times.
-
-I guess that you must be know wondering how should you do the following without using undefined or null?
+我猜想你一定好奇如何不使用 `undefined` 和 `null` 来做下面这件事情？
 ```javascript
 //bad
 function doSomething(arg){
@@ -221,30 +219,30 @@ function doSomething(arg){
     }
 }
 ```
-Comparing a variable against null doesn’t give you enough information about the value to determine whether is safe to proceed. Furtunately, JavaScript gives youi a few ways to determine the true value of a variable:
+比较一个变量和 `null` 不会给你足够的信息判断是否可以安全的进行。幸运的是，JavaScript 提供了一些方法帮助你决定一个变量的真实的值：
 
-a) Primitive values: If your expecting a value to be a primitive type (sting, number, boolean) then the typeof operator is your best option.
+** a) 基本值：如果你期待一个值的类型是基本类型（string，number，boolean），那么 `typeof` 操作符就是最佳选择。 **
 ``` javascript
 // detect a number
 if(typeof count === "number") {
     //do something
 }
 ```
-b) Reference values: The instanceof operator is the best way to detect objects of a particular reference type.
+** b) 引用值：`instanceof` 操作符是检测一个对象是否为特定类型的最佳方式。 **
 ``` javascript
 // detect a date
 if(value instanceof Date) {
     //do something
 }
 ```
-** c) Functions: Using typeof is the best way to detect functions. **
+** c) 函数：`typeof` 操作符是检测函数的最佳方式。 **
 ``` javascript
 // detect a function
 if(MyApp.Helpers.Parsing.DateParser typeof === "function") {
     MyApp.Helpers.Parsing.DateParser();
 }
 ```
-d) Arrays: The best way to detect arrays is to use the isArray() function. The only problem is that isArray does not work in old versions of internet explorer. But you can sue the following code for cross browser support.
+** d) 数组：最佳方式是使用 `isArray()` 函数。唯一的问题是旧版本的 IE 不支持 `isArray`，但是你可以用下面的代码来支持多浏览器。 **
 ``` javascript
 function isArray(value) {
     if (typeof Array.isArray === "function") {
@@ -254,7 +252,7 @@ function isArray(value) {
     }
 }
 ```
-e) Properties: The best way to detect a property is to use the in operator or the hasOwnProperty() function.
+e) 属性：`hasOwnProperty()` 函数是检测属性的最佳方式。 **
 ``` javascript
 var hero = { name : 'superman '};
 //chech property
@@ -266,16 +264,16 @@ if (hero.hasOwnProperty('name')) {
     // do something
 }
 ```
-6. Handle errors
+## 6. 处理错误
 
-Throwing custom errors in JavaScript can help you to decrease your debugging time. It is not easy to know when you should throw a custom error but in general errors should be thrown only in the deepest part of your application stack. Any code that handles application-especific logig should have error-handling capabilities. You can use the following code to create your custom errors:
+在 JavaScript 中抛自定义的错误可以帮助你减少调试的时间。不是那么容易得出何时应该抛自定义的错误，但是常规错误一般只有在应用程序最深层才抛。任何处理特定应用逻辑的代码应该有处理错误的能力。你可以用下面的代码创建自定义的错误：
 ``` javascript
 function MyError(message){
     this.message = message;
 }
 MyError.prototype = new Error(); //extending base error class
 ```
-Is also a good idea to chek for specifict error types (Error, EvalError, RangeError, ReferenceError, SyntaxError, TypeError, URIError) to have a more robust error handling:
+检查特定的错误类型也是个好主意（Error，EvalError，RangeError，ReferenceError，SyntaxError，TypeError，URIError）使得错误处理更加健壮：
 ``` javascript
 try {
     // Do something
@@ -289,29 +287,29 @@ try {
     }
 }
 ```
-7. Don’t modify objects that you don’t own
+## 7. 不要修改不属于你的对象
 
-There are things that you don’t own (objects that has not been written by you or your team)
+有一些东西是不属于你的（不是你自己或者团队写创建的）：
 
-a ) Native objects (e.g. Object, Array, etc.)
+** a) Native 对象 ** （e.g. Object，Array，etc.）
 
-b ) DOM objects (e.g. document)
+** b) DOM 对象 ** （e.g. document）
 
-c ) Browser object model (e.g. window)
+** c) 浏览器对象 ** （e.g. window）
 
-d ) Library objects (e.g. Jquery, $, _, Handlebars, etc.)
+** d) 库对象 ** （e.g. Jquery，$，\_，Handlebars，etc.）
 
-And thing that you should not try on objects that you don’t own:
+有一些事情是你不能在不属于你的对象上做的：
 
-a ) Don’t override methods
+** a) 不要复写方法 **
 
-b ) Don’t add new methods
+** b) 不要添加新方法 **
 
-c ) Don’t remove existing methods
+** c) 不要删除已经存在的方法 **
 
-If you really need to extend or modify an object that you don’t own, you should create a class that inherits from it and modify your new object. You can use one of the JavaScript inheritance basic forms:
+如果你确实需要扩展或者修改不属于你的对象，你应该创建一个类并继承它然后修改你的新类。你可以使用 JavaScript 的一种继承方式：
 
-a) Object-based Inheritance: an object inherits from another without calling a constructor function.
+** a) 基于对象的继承： ** 通过调用构造函数继承。
 ``` javascript
 var person = {
     name : "Bob",
@@ -322,7 +320,7 @@ var person = {
 var myPerson = Object.create(person);
 myPerson.sayName(); // Will display "Bob"
 ```
-a) Type-based inheritance: tipically requires two steps: prototypal inheritance and then constructor inheritance.
+** b) 基于类型的继承： ** 一般需要两步：先原型继承然后构造函数继承。
 ``` javascript
 function Person(name) {
     this.name = name;
@@ -334,15 +332,15 @@ function Author(name) {
 
 Author.prototype = new Person(); // prototypal inheritance
 ```
-8. Test everything
+## 8. 测试一切事情
 
-As the complexity of JavaScript applications grows we must introduce the same design patterns and preactices that we have been using for years in our server-side and desktop applications code to ensure high quality solutions. So it is time to start writting tests (unit, performance, integration…) for your JavaScript code. The good news is that there are several tools that you can use to help you:
+随着 JavaScript 应用复杂度的增长，我们应该引入和服务端或者桌面端应用使用了多年的一样的设计模式和实践，以帮助我们保证高质量的解决方案。所以是时候开始为你的 JavaScript 代码写测试了（单元测试，性能测试，集成测试……）。好消息是有一些工具可以帮助我们做这些：
 
 a) Jasmine
 
-b) JsTestDrive
+b) JsTestDriver
 
-c) PhantonJS
+c) PhantomJS
 
 d) QUnit
 
@@ -352,48 +350,46 @@ f) Yeti
 
 g) YUI Test
 
+## 9. 自动化一切事情
 
-9. Automate everything
+持续集成是一项软件开发实践，多个团队经常集成他们的工作，通常每个人每人至少一次——以至于每天会有多次集成。每一次集成都会通过自动化构建（包括测试）尽早检查发现错误。许多团队发现这种方式可以显著地减少集成问题并且帮助团队快速地开发出内聚的软件。
 
-Continuous Integration is a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily - leading to multiple integrations per day. Each integration is verified by an automated build (including test) to detect integration errors as quickly as possible. Many teams find that this approach leads to significantly reduced integration problems and allows a team to develop cohesive software more rapidly.
+持续集成不能避免 `bug`，但是它会帮助你更容易发现并且干掉 `bug`。在这方面它更像是自测试代码。如果你引入了一个 `bug`，快速地发现它，更加容易避免它。
 
-Continuous Integrations doesn’t get rid of bugs, but it does make them dramatically easier to find and remove. In this respect it’s rather like self-testing code. If you introduce a bug and detect it quickly it’s far easier to get rid of.
+持续集成已经和 `TDD（测试驱动开发）` 一起用了一段时间了。但是它过去总是传统的和服务端代码联系在一起。在前面的建议中我们说到是时候为我们的 JavaScript 代码写测试了。在这个建议中我想强调也是时候去持续集成它了。
 
-Continuous Integration has been used for a while together with TDD (Test Driven Development). But it was more traditionally linked to server-side code. In the previous point we said that it is time to test our JavasCript code. In this point I want to highlight that it is also time to continuous integrate it.
+** 构建 **
 
-Build
+在专业的开发环境中你通常会发现以下几种构建：
 
-In a professional development environment you will normaly find the following types of build:
+** a) 开发构建：** 由开发者在工作的时候运行，为了不中断生产率它应该尽可能快。
 
-a) Development Build: Run by developers as they are working, it should be as fast as possible to not interrupt productivity.
+** b) 集成构建：** 会定期运行的自动化构建。可能会在每次提交之后运行一遍，但是一般在大型项目中他们倾向于每个几分钟运行一遍。
 
-b) Integration Build: An automated build that run on a regular schedule. These are sometimes run for each commit, but on large projects, they tend to run on intervals for a few minutes.
+** c) 发布构建：** 在部署到产品环境之前按需运行的构建。
 
-c) Release Build: an on-deman build that is run prior to production push.
+** 持续集成 **
 
-Continuous integration
+有很多做持续集成的服务器但是 `Jenkins` 是其中最流行的一个，最流行的构建工具是 `Apache Ant`（译者注：现在像 Maven，Gradle 远比 Ant 流行）。构建你的 JavaScript 代码包括以下几个任务：
 
-There are serveral continuous integration servers but the most popular is Jenkings, the most popular build tool is apache ant. The process of building your JavaScript code includes several taks:
+** a) 自动化测试 ** 根据第8点中的讨论，你应该使用自动化工具帮助你测试你的 JavaScript 代码。
 
-a) Test automation As discussed on point 8 you should use test automation tools for testing your JavaScript code.
+** b) 验证 ** 你应该在你的构建过程中添加代码质量的验证。可以使用像 JSLint 或者 JSHint 这样的工具。
 
-b) Validation You should add code quality validation to your build process. You can use tools like JSLint or JSHint
+** c) 连接 ** 你应该把所有的 JavaScript 文件连接成为一个单独的文件。
 
-c) Concatenation You should join all your JavaScript files in one single file.
+** d) 烘焙 ** 你应该让添加 License 或者 Version 的任务作构建的一部分。
 
-d) Baking You can perform tasks like adding a code the license or version code as part of the build.
+** e) 精缩 ** 你应该使用像 `uglify.js` 的工具让精缩成为集成的一部分。
 
-e) Minification You should integrate as part the build the minification by tools like uglify.js.
+** f) 压缩 ** 你应该让压缩 JavaScript 代码成为够的一部分。
 
-f) Compression You should gzip your JavaScript as part of your build.
+** g) 文档 ** 你应该使用像 JS Doc Toolkit 这样的工具让自动生成文档作为集成的一部分。
 
-g) Documentation You should integrate as part of your build the auto-generation id the dosumentation by tools like JS Doc Toolkit.
+## 10. 找一位大师
 
+一个真正的忍者从来没有停止过学习，所以你最好找一位大师！
 
-10. Find a great master
+![](../img/master.jpg)
 
-A real ninja never stop learning, so you better find a great master!
-
-pai-mei1.jpg
-
-Where can you find one? The answer is of course the Internet. I recommend to read the blogs of some of the chome or mozilla developers about javascript as well as other js libraries like jquery.
+从哪里可以找到一位呢？答案是互联网。我推荐阅读一些 Chrome 或者 Mozilla 的开发者关于 JavaScript 的博客和一些其他像 `jquery` 的 JS 库。
