@@ -612,17 +612,25 @@ a.article-title:hover {
 }
 .article-entry table {
   width: 100%;
+  border: 1px solid #ddd;
   border-collapse: collapse;
   border-spacing: 0;
 }
 .article-entry th {
   font-weight: bold;
+  border: 1px solid #ddd;
   border-bottom: 3px solid #ddd;
-  padding-bottom: 0.5em;
+  padding: 10px;
 }
 .article-entry td {
+  border: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  padding: 10px 0;
+  padding: 10px;
+}
+.article-entry figure table,
+.article-entry figure th,
+.article-entry figure td {
+  border: none;
 }
 .article-entry blockquote {
   font-family: Georgia, "Times New Roman", serif;
