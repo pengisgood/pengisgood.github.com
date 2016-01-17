@@ -1,8 +1,10 @@
 ---
-title: 成为 JavaScript 忍者
+title: "[译]成为 JavaScript 忍者"
 date: 2016-01-16 10:13:29
 tags: JavaScript
 ---
+
+> 原文链接：[http://blog.wolksoftware.com/becoming-a-javascript-ninja](http://blog.wolksoftware.com/becoming-a-javascript-ninja)
 
 我努力地训练着想成为大家所说的“JavaScript 忍者”。在这片文章中我将会分享一些迄今为止我学到的比较重要的东西。
 
