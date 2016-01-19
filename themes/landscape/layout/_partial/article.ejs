@@ -23,8 +23,10 @@
       <% } %>
     </div>
     <footer class="article-footer">
+      <!-- TODO: optimize share button -->
       <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link">Share</a>
-      <% if (post.comments && config.duoshuo_shortname){ %>
+      <!-- TODO: enable Comments -->
+      <% if (!index && post.comments && config.duoshuo_shortname){ %>
         <a href="<%- post.permalink %>#duoshuo_thread" class="article-comment-link">Comments</a>
       <% } %>
       <%- partial('post/tag') %>
