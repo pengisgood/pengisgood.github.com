@@ -8,7 +8,7 @@ tags: JavaScript
 
 我努力地训练着想成为大家所说的“JavaScript 忍者”。在这篇文章中我将会分享一些迄今为止我学到的比较重要的东西。
 
-![](../img/ninja.jpg)
+![](../imgs/ninja.jpg)
 
 ## 1. 使用代码约定
 
@@ -392,6 +392,6 @@ g) YUI Test
 
 一个真正的忍者从来没有停止过学习，所以你最好找一位大师！
 
-![](../img/master.jpg)
+![](../imgs/master.jpg)
 
 从哪里可以找到一位呢？答案是互联网。我推荐阅读一些 Chrome 或者 Mozilla 的开发者关于 JavaScript 的博客和一些其他像 `jquery` 的 JS 库。
