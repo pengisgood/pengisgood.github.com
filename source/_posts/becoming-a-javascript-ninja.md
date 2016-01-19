@@ -374,19 +374,19 @@ g) YUI Test
 
 有很多做持续集成的服务器但是 `Jenkins` 是其中最流行的一个，最流行的构建工具是 `Apache Ant`（译者注：现在像 Maven，Gradle 远比 Ant 流行）。构建你的 JavaScript 代码包括以下几个任务：
 
-** a) 自动化测试 ** 根据第8点中的讨论，你应该使用自动化工具帮助你测试你的 JavaScript 代码。
+** a) Test automation ** 根据第8点中的讨论，你应该使用自动化工具帮助你测试你的 JavaScript 代码。
 
-** b) 验证 ** 你应该在你的构建过程中添加代码质量的验证。可以使用像 JSLint 或者 JSHint 这样的工具。
+** b) Validation ** 你应该在你的构建过程中添加代码质量的验证。可以使用像 JSLint 或者 JSHint 这样的工具。
 
-** c) 连接 ** 你应该把所有的 JavaScript 文件连接成为一个单独的文件。
+** c) Concatenation ** 你应该把所有的 JavaScript 文件连接成为一个单独的文件。
 
-** d) 烘焙 ** 你应该让添加 License 或者 Version 的任务作构建的一部分。
+** d) Baking ** 你应该让添加 License 或者 Version 的任务作构建的一部分。
 
-** e) 精缩 ** 你应该使用像 `uglify.js` 的工具让精缩成为集成的一部分。
+** e) Minification ** 你应该使用像 `uglify.js` 的工具让 Minify 成为集成的一部分。
 
-** f) 压缩 ** 你应该让压缩 JavaScript 代码成为够的一部分。
+** f) Compression ** 你应该让 Gzip JavaScript 代码成为够的一部分。
 
-** g) 文档 ** 你应该使用像 JS Doc Toolkit 这样的工具让自动生成文档作为集成的一部分。
+** g) Documentation ** 你应该使用像 JS Doc Toolkit 这样的工具让自动生成文档作为集成的一部分。
 
 ## 10. 找一位大师
 
