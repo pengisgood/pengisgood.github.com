@@ -2,6 +2,7 @@
 title: "[译]成为 JavaScript 忍者"
 date: 2016-01-16 10:13:29
 tags: JavaScript
+categories: Web 前端
 ---
 
 > 原文链接：[http://blog.wolksoftware.com/becoming-a-javascript-ninja](http://blog.wolksoftware.com/becoming-a-javascript-ninja)
