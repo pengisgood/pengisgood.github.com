@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Better late than never]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://pengisgood.github.io/"/>
-  <updated>2016-02-16T02:13:03.000Z</updated>
+  <updated>2016-03-30T16:05:39.000Z</updated>
   <id>http://pengisgood.github.io/</id>
   
   <author>
@@ -13,6 +13,55 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[操练 Ansible 之准备环境]]></title>
+    <link href="http://pengisgood.github.io/2016/03/30/ansible-workshop-vagrant-virtualbox/"/>
+    <id>http://pengisgood.github.io/2016/03/30/ansible-workshop-vagrant-virtualbox/</id>
+    <published>2016-03-30T15:12:59.000Z</published>
+    <updated>2016-03-30T16:05:39.000Z</updated>
+    <content type="html"><![CDATA[<p>工欲善其事，必先利其器。在正式开始操练 Ansible 之前，我们得准备好相应的环境，安装一些软件：</p>
+<ul>
+<li><a href="https://www.vagrantup.com/downloads.html" target="_blank" rel="external">Vagrant</a></li>
+<li><a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="external">VirtualBox</a></li>
+<li><a href="http://docs.ansible.com/ansible/intro_installation.html" target="_blank" rel="external">Ansible</a></li>
+</ul>
+<h2 id="1-__u5B89_u88C5_u865A_u62DF_u673A"><a href="#1-__u5B89_u88C5_u865A_u62DF_u673A" class="headerlink" title="1. 安装虚拟机"></a>1. 安装虚拟机</h2><p>安装好 VirtualBox 之后，我们需要在里面安装一台 Linux 的虚拟机，为了能够很方便的创建和配置虚拟机，我们可以让 Vagrant 来帮助我们。</p>
+<p>当这两样都安装好之后，开始使用 Vagrant 安装虚拟机。一般来说，有两种方式：在线安装和离线安装。</p>
+<h3 id="u5728_u7EBF_u5B89_u88C5"><a href="#u5728_u7EBF_u5B89_u88C5" class="headerlink" title="在线安装"></a>在线安装</h3><p>Vagrant 社区提供了很多主流的 Linux 发行版对应的 [Box]（<a href="https://atlas.hashicorp.com/boxes/search）。以" target="_blank" rel="external">https://atlas.hashicorp.com/boxes/search）。以</a> Ubuntu 为例，我们可以在前面的这个仓库中搜索到 <a href="https://atlas.hashicorp.com/ubuntu/boxes/trusty64" target="_blank" rel="external">Ubuntu/trusty64</a>，然后我们在命令行中执行以下命令即可开始在线安装。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant init ubuntu/trusty64</span><br><span class="line">$ vagrant up --provider virtualbox</span><br></pre></td></tr></table></figure>
+<p>除此之外，也有一些第三方玩家提供一些 Box，例如：<a href="http://www.vagrantbox.es/" target="_blank" rel="external">Vagrantbox.es</a>，不过使用起来得手动添加 Box 的地址，参考下面的命令：<br><a id="more"></a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant box add &#123;title&#125; &#123;url&#125;</span><br><span class="line">$ vagrant init &#123;title&#125;</span><br><span class="line">$ vagrant up</span><br></pre></td></tr></table></figure>
+<p>一般来说，一个 box 都有好几百兆，如果网络好的话，可以选这两种方式。</p>
+<h3 id="u79BB_u7EBF_u5B89_u88C5"><a href="#u79BB_u7EBF_u5B89_u88C5" class="headerlink" title="离线安装"></a>离线安装</h3><p>当然，生在红旗下，长在新中国的我们，不是每个人都有这么好的网络条件，那么这个时候离线安装似乎对我们来说更加有利。相信稍有经验的同学已经意识到在线安装的第二种方式稍加变形即可。假设我本地（~/Downloads/test.box）已经有一个 box 文件了，那么我可以下面的方式直接添加本地的 box。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant box add <span class="built_in">test</span>Box ~/Downloads/test.box</span><br><span class="line">$ vagrant init <span class="built_in">test</span>Box</span><br><span class="line">$ vagrant up</span><br></pre></td></tr></table></figure>
+<p>在执行完添加步骤之后，可以通过以下方式查看已经存在的 Box 列表：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant box list</span><br></pre></td></tr></table></figure>
+<p>如果你的网络条件不是很好，建议采用离线安装的方式。</p>
+<h2 id="2-__u914D_u7F6E_u865A_u62DF_u673A"><a href="#2-__u914D_u7F6E_u865A_u62DF_u673A" class="headerlink" title="2. 配置虚拟机"></a>2. 配置虚拟机</h2><!-- TODO -->
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>工欲善其事，必先利其器。在正式开始操练 Ansible 之前，我们得准备好相应的环境，安装一些软件：</p>
+<ul>
+<li><a href="https://www.vagrantup.com/downloads.html">Vagrant</a></li>
+<li><a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a></li>
+<li><a href="http://docs.ansible.com/ansible/intro_installation.html">Ansible</a></li>
+</ul>
+<h2 id="1-__u5B89_u88C5_u865A_u62DF_u673A"><a href="#1-__u5B89_u88C5_u865A_u62DF_u673A" class="headerlink" title="1. 安装虚拟机"></a>1. 安装虚拟机</h2><p>安装好 VirtualBox 之后，我们需要在里面安装一台 Linux 的虚拟机，为了能够很方便的创建和配置虚拟机，我们可以让 Vagrant 来帮助我们。</p>
+<p>当这两样都安装好之后，开始使用 Vagrant 安装虚拟机。一般来说，有两种方式：在线安装和离线安装。</p>
+<h3 id="u5728_u7EBF_u5B89_u88C5"><a href="#u5728_u7EBF_u5B89_u88C5" class="headerlink" title="在线安装"></a>在线安装</h3><p>Vagrant 社区提供了很多主流的 Linux 发行版对应的 [Box]（<a href="https://atlas.hashicorp.com/boxes/search）。以">https://atlas.hashicorp.com/boxes/search）。以</a> Ubuntu 为例，我们可以在前面的这个仓库中搜索到 <a href="https://atlas.hashicorp.com/ubuntu/boxes/trusty64">Ubuntu/trusty64</a>，然后我们在命令行中执行以下命令即可开始在线安装。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant init ubuntu/trusty64</span><br><span class="line">$ vagrant up --provider virtualbox</span><br></pre></td></tr></table></figure>
+<p>除此之外，也有一些第三方玩家提供一些 Box，例如：<a href="http://www.vagrantbox.es/">Vagrantbox.es</a>，不过使用起来得手动添加 Box 的地址，参考下面的命令：<br>]]>
+    
+    </summary>
+    
+      <category term="Ansible" scheme="http://pengisgood.github.io/tags/Ansible/"/>
+    
+      <category term="Vagrant" scheme="http://pengisgood.github.io/tags/Vagrant/"/>
+    
+      <category term="DevOps" scheme="http://pengisgood.github.io/categories/DevOps/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[多个 ng-app 中 Controllers & Services 之间的通信]]></title>
