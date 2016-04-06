@@ -5,6 +5,8 @@ tags: [Ansible, Vagrant]
 categories: DevOps
 ---
 
+![](../imgs/knives.jpg)
+
 工欲善其事，必先利其器。在正式开始操练 Ansible 之前，我们得准备好相应的环境，安装一些软件：
 * [Vagrant](https://www.vagrantup.com/downloads.html)
 * [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
@@ -55,4 +57,30 @@ $ vagrant box list
 如果你的网络条件不是很好，建议采用离线安装的方式。
 
 ## 2. 配置虚拟机
-<!-- TODO -->
+
+在我们通过离线安装的过程中，完成 `vagrant box add testBox /path/to/box_name.box` 之后，可以通过 `vagrant box list` 查看已经添加的 box。然后可以让 Vagrant执行 `vagrant init testBox` 帮我们生成一个默认的配置文件，执行完之后打开当前目录下的 `Vagrantfile`，内容应该如下（注释已被省略）：
+
+```ruby
+Vagrant.configure(2) do |config|
+  config.vm.box = "testBox"
+end
+```
+
+这里的 `testBox` 就是我们在执行 `vagrant init testBox` 时指定的名字。我们在用 Ansible 配置 Nginx 之前，需要先让虚拟机暴露80和443端口以便在 host 机器上能够访问，接下来我们将 host 机器上的8080和8443分别 forward 到 guest 机器（也就是我们用 vagrant 启动的虚拟机）的80和443端口上。如下图所示。
+![](../imgs/forward-port.jpg)
+
+为了达到这个效果，最终只需要在 Vagrantfile 中添加两行配置即可，如下：
+
+```ruby
+Vagrant.configure(2) do |config|
+  config.vm.box = "testBox"
+  config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 443, host: 8443
+end
+```
+
+完成修改后，需要执行如下操作来告诉 Vagrant 让配置生效：
+
+```bash
+$ vagrant reload
+```
