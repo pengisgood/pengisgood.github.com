@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Better late than never]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://pengisgood.github.io/"/>
-  <updated>2016-03-30T16:05:39.000Z</updated>
+  <updated>2016-04-06T17:45:55.000Z</updated>
   <id>http://pengisgood.github.io/</id>
   
   <author>
@@ -19,8 +19,9 @@
     <link href="http://pengisgood.github.io/2016/03/30/ansible-workshop-vagrant-virtualbox/"/>
     <id>http://pengisgood.github.io/2016/03/30/ansible-workshop-vagrant-virtualbox/</id>
     <published>2016-03-30T15:12:59.000Z</published>
-    <updated>2016-03-30T16:05:39.000Z</updated>
-    <content type="html"><![CDATA[<p>工欲善其事，必先利其器。在正式开始操练 Ansible 之前，我们得准备好相应的环境，安装一些软件：</p>
+    <updated>2016-04-06T17:45:55.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="/../imgs/knives.jpg" alt=""></p>
+<p>工欲善其事，必先利其器。在正式开始操练 Ansible 之前，我们得准备好相应的环境，安装一些软件：</p>
 <ul>
 <li><a href="https://www.vagrantup.com/downloads.html" target="_blank" rel="external">Vagrant</a></li>
 <li><a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="external">VirtualBox</a></li>
@@ -38,10 +39,17 @@
 <p>在执行完添加步骤之后，可以通过以下方式查看已经存在的 Box 列表：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant box list</span><br></pre></td></tr></table></figure>
 <p>如果你的网络条件不是很好，建议采用离线安装的方式。</p>
-<h2 id="2-__u914D_u7F6E_u865A_u62DF_u673A"><a href="#2-__u914D_u7F6E_u865A_u62DF_u673A" class="headerlink" title="2. 配置虚拟机"></a>2. 配置虚拟机</h2><!-- TODO -->
+<h2 id="2-__u914D_u7F6E_u865A_u62DF_u673A"><a href="#2-__u914D_u7F6E_u865A_u62DF_u673A" class="headerlink" title="2. 配置虚拟机"></a>2. 配置虚拟机</h2><p>在我们通过离线安装的过程中，完成 <code>vagrant box add testBox /path/to/box_name.box</code> 之后，可以通过 <code>vagrant box list</code> 查看已经添加的 box。然后可以让 Vagrant执行 <code>vagrant init testBox</code> 帮我们生成一个默认的配置文件，执行完之后打开当前目录下的 <code>Vagrantfile</code>，内容应该如下（注释已被省略）：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="constant">Vagrant</span>.configure(<span class="number">2</span>) <span class="keyword">do</span> |config|</span><br><span class="line">  config.vm.box = <span class="string">"testBox"</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>这里的 <code>testBox</code> 就是我们在执行 <code>vagrant init testBox</code> 时指定的名字。我们在用 Ansible 配置 Nginx 之前，需要先让虚拟机暴露80和443端口以便在 host 机器上能够访问，接下来我们将 host 机器上的8080和8443分别 forward 到 guest 机器（也就是我们用 vagrant 启动的虚拟机）的80和443端口上。如下图所示。<br><img src="/../imgs/forward-port.jpg" alt=""></p>
+<p>为了达到这个效果，最终只需要在 Vagrantfile 中添加两行配置即可，如下：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="constant">Vagrant</span>.configure(<span class="number">2</span>) <span class="keyword">do</span> |config|</span><br><span class="line">  config.vm.box = <span class="string">"testBox"</span></span><br><span class="line">  config.vm.network <span class="string">"forwarded_port"</span>, <span class="symbol">guest:</span> <span class="number">80</span>, <span class="symbol">host:</span> <span class="number">8080</span></span><br><span class="line">  config.vm.network <span class="string">"forwarded_port"</span>, <span class="symbol">guest:</span> <span class="number">443</span>, <span class="symbol">host:</span> <span class="number">8443</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>完成修改后，需要执行如下操作来告诉 Vagrant 让配置生效：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant reload</span><br></pre></td></tr></table></figure>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>工欲善其事，必先利其器。在正式开始操练 Ansible 之前，我们得准备好相应的环境，安装一些软件：</p>
+    <![CDATA[<p><img src="/../imgs/knives.jpg" alt=""></p>
+<p>工欲善其事，必先利其器。在正式开始操练 Ansible 之前，我们得准备好相应的环境，安装一些软件：</p>
 <ul>
 <li><a href="https://www.vagrantup.com/downloads.html">Vagrant</a></li>
 <li><a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a></li>
