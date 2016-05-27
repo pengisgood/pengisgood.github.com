@@ -32,7 +32,9 @@ Ansible
 当这两样都安装好之后，开始使用 Vagrant 安装虚拟机。一般来">
 <meta property="og:image" content="http://pengisgood.github.io/../imgs/knives.jpg">
 <meta property="og:image" content="http://pengisgood.github.io/../imgs/forward-port.jpg">
-<meta property="og:updated_time" content="2016-04-06T17:45:55.000Z">
+<meta property="og:image" content="http://pengisgood.github.io/../imgs/vagrant-command.png">
+<meta property="og:image" content="http://pengisgood.github.io/../imgs/ansible-command-args.png">
+<meta property="og:updated_time" content="2016-05-27T07:38:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="操练 Ansible 之准备环境">
 <meta name="twitter:description" content="工欲善其事，必先利其器。在正式开始操练 Ansible 之前，我们得准备好相应的环境，安装一些软件：
@@ -145,6 +147,8 @@ Ansible
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="constant">Vagrant</span>.configure(<span class="number">2</span>) <span class="keyword">do</span> |config|</span><br><span class="line">  config.vm.box = <span class="string">"testBox"</span></span><br><span class="line">  config.vm.network <span class="string">"forwarded_port"</span>, <span class="symbol">guest:</span> <span class="number">80</span>, <span class="symbol">host:</span> <span class="number">8080</span></span><br><span class="line">  config.vm.network <span class="string">"forwarded_port"</span>, <span class="symbol">guest:</span> <span class="number">443</span>, <span class="symbol">host:</span> <span class="number">8443</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 <p>完成修改后，需要执行如下操作来告诉 Vagrant 让配置生效：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant reload</span><br></pre></td></tr></table></figure>
+<h2 id="3-__u9644_u5F55"><a href="#3-__u9644_u5F55" class="headerlink" title="3. 附录"></a>3. 附录</h2><h3 id="Vagrant"><a href="#Vagrant" class="headerlink" title="Vagrant"></a>Vagrant</h3><p>Vagrant 的常用命令如下图所示：<br><img src="/../imgs/vagrant-command.png" alt=""></p>
+<h3 id="Ansible"><a href="#Ansible" class="headerlink" title="Ansible"></a>Ansible</h3><p>Ansible 命令的基本参数如下图所示：<br><img src="/../imgs/ansible-command-args.png" alt=""></p>
 
       
     </div>
