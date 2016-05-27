@@ -84,3 +84,13 @@ end
 ```bash
 $ vagrant reload
 ```
+
+## 3. 附录
+
+### Vagrant
+Vagrant 的常用命令如下图所示：
+![](../imgs/vagrant-command.png)
+
+### Ansible
+Ansible 命令的基本参数如下图所示：
+![](../imgs/ansible-command-args.png)
