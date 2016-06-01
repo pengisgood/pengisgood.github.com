@@ -17,10 +17,10 @@ VirtualBox
 Ansible
 
 1. 安装虚拟机安装好 VirtualBox 之后，我们需要在里面安装一台 Linux 的虚拟机，为了能够很方便的创建和配置虚拟机，我们可以让 Vagrant 来帮助我们。
-当这两样都安装好之后，开始使用 Vagrant 安装虚拟机。一般来">
+当这两样都安装好之后，开始使用 Vagrant 安装虚拟机。一般">
 <meta property="og:type" content="article">
 <meta property="og:title" content="操练 Ansible 之准备环境">
-<meta property="og:url" content="http://pengisgood.github.io/2016/03/30/ansible-workshop-vagrant-virtualbox/index.html">
+<meta property="og:url" content="http://penghongwei.cc/2016/03/30/ansible-workshop-vagrant-virtualbox/index.html">
 <meta property="og:site_name" content="谋事在人，成事在天">
 <meta property="og:description" content="工欲善其事，必先利其器。在正式开始操练 Ansible 之前，我们得准备好相应的环境，安装一些软件：
 
@@ -29,11 +29,11 @@ VirtualBox
 Ansible
 
 1. 安装虚拟机安装好 VirtualBox 之后，我们需要在里面安装一台 Linux 的虚拟机，为了能够很方便的创建和配置虚拟机，我们可以让 Vagrant 来帮助我们。
-当这两样都安装好之后，开始使用 Vagrant 安装虚拟机。一般来">
-<meta property="og:image" content="http://pengisgood.github.io/../imgs/knives.jpg">
-<meta property="og:image" content="http://pengisgood.github.io/../imgs/forward-port.jpg">
-<meta property="og:image" content="http://pengisgood.github.io/../imgs/vagrant-command.png">
-<meta property="og:image" content="http://pengisgood.github.io/../imgs/ansible-command-args.png">
+当这两样都安装好之后，开始使用 Vagrant 安装虚拟机。一般">
+<meta property="og:image" content="http://penghongwei.cc/../imgs/knives.jpg">
+<meta property="og:image" content="http://penghongwei.cc/../imgs/forward-port.jpg">
+<meta property="og:image" content="http://penghongwei.cc/../imgs/vagrant-command.png">
+<meta property="og:image" content="http://penghongwei.cc/../imgs/ansible-command-args.png">
 <meta property="og:updated_time" content="2016-05-27T07:38:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="操练 Ansible 之准备环境">
@@ -44,7 +44,8 @@ VirtualBox
 Ansible
 
 1. 安装虚拟机安装好 VirtualBox 之后，我们需要在里面安装一台 Linux 的虚拟机，为了能够很方便的创建和配置虚拟机，我们可以让 Vagrant 来帮助我们。
-当这两样都安装好之后，开始使用 Vagrant 安装虚拟机。一般来">
+当这两样都安装好之后，开始使用 Vagrant 安装虚拟机。一般">
+<meta name="twitter:image" content="http://penghongwei.cc/../imgs/knives.jpg">
 <meta name="twitter:creator" content="@pengisgood">
 <link rel="publisher" href="pengisgood">
   
@@ -54,7 +55,7 @@ Ansible
     <link rel="icon" href="/favicon.png">
   
   <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -89,7 +90,7 @@ Ansible
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://pengisgood.github.io"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://penghongwei.cc"></form>
       </div>
     </div>
   </div>
@@ -121,43 +122,43 @@ Ansible
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/../imgs/knives.jpg" alt=""></p>
+        <p><img src="../imgs/knives.jpg" alt=""></p>
 <p>工欲善其事，必先利其器。在正式开始操练 Ansible 之前，我们得准备好相应的环境，安装一些软件：</p>
 <ul>
 <li><a href="https://www.vagrantup.com/downloads.html" target="_blank" rel="external">Vagrant</a></li>
 <li><a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="external">VirtualBox</a></li>
 <li><a href="http://docs.ansible.com/ansible/intro_installation.html" target="_blank" rel="external">Ansible</a></li>
 </ul>
-<h2 id="1-__u5B89_u88C5_u865A_u62DF_u673A"><a href="#1-__u5B89_u88C5_u865A_u62DF_u673A" class="headerlink" title="1. 安装虚拟机"></a>1. 安装虚拟机</h2><p>安装好 VirtualBox 之后，我们需要在里面安装一台 Linux 的虚拟机，为了能够很方便的创建和配置虚拟机，我们可以让 Vagrant 来帮助我们。</p>
+<h2 id="1-安装虚拟机"><a href="#1-安装虚拟机" class="headerlink" title="1. 安装虚拟机"></a>1. 安装虚拟机</h2><p>安装好 VirtualBox 之后，我们需要在里面安装一台 Linux 的虚拟机，为了能够很方便的创建和配置虚拟机，我们可以让 Vagrant 来帮助我们。</p>
 <p>当这两样都安装好之后，开始使用 Vagrant 安装虚拟机。一般来说，有两种方式：在线安装和离线安装。</p>
-<h3 id="u5728_u7EBF_u5B89_u88C5"><a href="#u5728_u7EBF_u5B89_u88C5" class="headerlink" title="在线安装"></a>在线安装</h3><p>Vagrant 社区提供了很多主流的 Linux 发行版对应的 [Box]（<a href="https://atlas.hashicorp.com/boxes/search）。以" target="_blank" rel="external">https://atlas.hashicorp.com/boxes/search）。以</a> Ubuntu 为例，我们可以在前面的这个仓库中搜索到 <a href="https://atlas.hashicorp.com/ubuntu/boxes/trusty64" target="_blank" rel="external">Ubuntu/trusty64</a>，然后我们在命令行中执行以下命令即可开始在线安装。</p>
+<h3 id="在线安装"><a href="#在线安装" class="headerlink" title="在线安装"></a>在线安装</h3><p>Vagrant 社区提供了很多主流的 Linux 发行版对应的 [Box]（<a href="https://atlas.hashicorp.com/boxes/search）。以" target="_blank" rel="external">https://atlas.hashicorp.com/boxes/search）。以</a> Ubuntu 为例，我们可以在前面的这个仓库中搜索到 <a href="https://atlas.hashicorp.com/ubuntu/boxes/trusty64" target="_blank" rel="external">Ubuntu/trusty64</a>，然后我们在命令行中执行以下命令即可开始在线安装。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant init ubuntu/trusty64</span><br><span class="line">$ vagrant up --provider virtualbox</span><br></pre></td></tr></table></figure>
 <p>除此之外，也有一些第三方玩家提供一些 Box，例如：<a href="http://www.vagrantbox.es/" target="_blank" rel="external">Vagrantbox.es</a>，不过使用起来得手动添加 Box 的地址，参考下面的命令：<br><a id="more"></a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant box add &#123;title&#125; &#123;url&#125;</span><br><span class="line">$ vagrant init &#123;title&#125;</span><br><span class="line">$ vagrant up</span><br></pre></td></tr></table></figure>
 <p>一般来说，一个 box 都有好几百兆，如果网络好的话，可以选这两种方式。</p>
-<h3 id="u79BB_u7EBF_u5B89_u88C5"><a href="#u79BB_u7EBF_u5B89_u88C5" class="headerlink" title="离线安装"></a>离线安装</h3><p>当然，生在红旗下，长在新中国的我们，不是每个人都有这么好的网络条件，那么这个时候离线安装似乎对我们来说更加有利。相信稍有经验的同学已经意识到在线安装的第二种方式稍加变形即可。假设我本地（~/Downloads/test.box）已经有一个 box 文件了，那么我可以下面的方式直接添加本地的 box。</p>
+<h3 id="离线安装"><a href="#离线安装" class="headerlink" title="离线安装"></a>离线安装</h3><p>当然，生在红旗下，长在新中国的我们，不是每个人都有这么好的网络条件，那么这个时候离线安装似乎对我们来说更加有利。相信稍有经验的同学已经意识到在线安装的第二种方式稍加变形即可。假设我本地（~/Downloads/test.box）已经有一个 box 文件了，那么我可以下面的方式直接添加本地的 box。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant box add <span class="built_in">test</span>Box ~/Downloads/test.box</span><br><span class="line">$ vagrant init <span class="built_in">test</span>Box</span><br><span class="line">$ vagrant up</span><br></pre></td></tr></table></figure>
 <p>在执行完添加步骤之后，可以通过以下方式查看已经存在的 Box 列表：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant box list</span><br></pre></td></tr></table></figure>
 <p>如果你的网络条件不是很好，建议采用离线安装的方式。</p>
-<h2 id="2-__u914D_u7F6E_u865A_u62DF_u673A"><a href="#2-__u914D_u7F6E_u865A_u62DF_u673A" class="headerlink" title="2. 配置虚拟机"></a>2. 配置虚拟机</h2><p>在我们通过离线安装的过程中，完成 <code>vagrant box add testBox /path/to/box_name.box</code> 之后，可以通过 <code>vagrant box list</code> 查看已经添加的 box。然后可以让 Vagrant执行 <code>vagrant init testBox</code> 帮我们生成一个默认的配置文件，执行完之后打开当前目录下的 <code>Vagrantfile</code>，内容应该如下（注释已被省略）：</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="constant">Vagrant</span>.configure(<span class="number">2</span>) <span class="keyword">do</span> |config|</span><br><span class="line">  config.vm.box = <span class="string">"testBox"</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<p>这里的 <code>testBox</code> 就是我们在执行 <code>vagrant init testBox</code> 时指定的名字。我们在用 Ansible 配置 Nginx 之前，需要先让虚拟机暴露80和443端口以便在 host 机器上能够访问，接下来我们将 host 机器上的8080和8443分别 forward 到 guest 机器（也就是我们用 vagrant 启动的虚拟机）的80和443端口上。如下图所示。<br><img src="/../imgs/forward-port.jpg" alt=""></p>
+<h2 id="2-配置虚拟机"><a href="#2-配置虚拟机" class="headerlink" title="2. 配置虚拟机"></a>2. 配置虚拟机</h2><p>在我们通过离线安装的过程中，完成 <code>vagrant box add testBox /path/to/box_name.box</code> 之后，可以通过 <code>vagrant box list</code> 查看已经添加的 box。然后可以让 Vagrant执行 <code>vagrant init testBox</code> 帮我们生成一个默认的配置文件，执行完之后打开当前目录下的 <code>Vagrantfile</code>，内容应该如下（注释已被省略）：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Vagrant.configure(<span class="number">2</span>) <span class="keyword">do</span> <span class="params">|config|</span></span><br><span class="line">  config.vm.box = <span class="string">"testBox"</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>这里的 <code>testBox</code> 就是我们在执行 <code>vagrant init testBox</code> 时指定的名字。我们在用 Ansible 配置 Nginx 之前，需要先让虚拟机暴露80和443端口以便在 host 机器上能够访问，接下来我们将 host 机器上的8080和8443分别 forward 到 guest 机器（也就是我们用 vagrant 启动的虚拟机）的80和443端口上。如下图所示。<br><img src="../imgs/forward-port.jpg" alt=""></p>
 <p>为了达到这个效果，最终只需要在 Vagrantfile 中添加两行配置即可，如下：</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="constant">Vagrant</span>.configure(<span class="number">2</span>) <span class="keyword">do</span> |config|</span><br><span class="line">  config.vm.box = <span class="string">"testBox"</span></span><br><span class="line">  config.vm.network <span class="string">"forwarded_port"</span>, <span class="symbol">guest:</span> <span class="number">80</span>, <span class="symbol">host:</span> <span class="number">8080</span></span><br><span class="line">  config.vm.network <span class="string">"forwarded_port"</span>, <span class="symbol">guest:</span> <span class="number">443</span>, <span class="symbol">host:</span> <span class="number">8443</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Vagrant.configure(<span class="number">2</span>) <span class="keyword">do</span> <span class="params">|config|</span></span><br><span class="line">  config.vm.box = <span class="string">"testBox"</span></span><br><span class="line">  config.vm.network <span class="string">"forwarded_port"</span>, <span class="symbol">guest:</span> <span class="number">80</span>, <span class="symbol">host:</span> <span class="number">8080</span></span><br><span class="line">  config.vm.network <span class="string">"forwarded_port"</span>, <span class="symbol">guest:</span> <span class="number">443</span>, <span class="symbol">host:</span> <span class="number">8443</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 <p>完成修改后，需要执行如下操作来告诉 Vagrant 让配置生效：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant reload</span><br></pre></td></tr></table></figure>
-<h2 id="3-__u9644_u5F55"><a href="#3-__u9644_u5F55" class="headerlink" title="3. 附录"></a>3. 附录</h2><h3 id="Vagrant"><a href="#Vagrant" class="headerlink" title="Vagrant"></a>Vagrant</h3><p>Vagrant 的常用命令如下图所示：<br><img src="/../imgs/vagrant-command.png" alt=""></p>
-<h3 id="Ansible"><a href="#Ansible" class="headerlink" title="Ansible"></a>Ansible</h3><p>Ansible 命令的基本参数如下图所示：<br><img src="/../imgs/ansible-command-args.png" alt=""></p>
+<h2 id="3-附录"><a href="#3-附录" class="headerlink" title="3. 附录"></a>3. 附录</h2><h3 id="Vagrant"><a href="#Vagrant" class="headerlink" title="Vagrant"></a>Vagrant</h3><p>Vagrant 的常用命令如下图所示：<br><img src="../imgs/vagrant-command.png" alt=""></p>
+<h3 id="Ansible"><a href="#Ansible" class="headerlink" title="Ansible"></a>Ansible</h3><p>Ansible 命令的基本参数如下图所示：<br><img src="../imgs/ansible-command-args.png" alt=""></p>
 
       
     </div>
     <footer class="article-footer">
       <!-- TODO: optimize share button -->
-      <a data-url="http://pengisgood.github.io/2016/03/30/ansible-workshop-vagrant-virtualbox/" data-id="ciowldmys0000m5cc5y6ajjid" class="article-share-link">Share</a>
+      <a data-url="http://penghongwei.cc/2016/03/30/ansible-workshop-vagrant-virtualbox/" data-id="ciowm5zz70000fvccyzyjodf9" class="article-share-link">Share</a>
       <!-- TODO: enable Comments -->
       
-        <a href="http://pengisgood.github.io/2016/03/30/ansible-workshop-vagrant-virtualbox/#duoshuo_thread" class="article-comment-link">Comments</a>
+        <a href="http://penghongwei.cc/2016/03/30/ansible-workshop-vagrant-virtualbox/#duoshuo_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ansible/">Ansible</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vagrant/">Vagrant</a></li></ul>
@@ -182,7 +183,7 @@ Ansible
 
   <section id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-ansible-workshop-vagrant-virtualbox" data-title="操练 Ansible 之准备环境" data-url="http://pengisgood.github.io/2016/03/30/ansible-workshop-vagrant-virtualbox/"></div>
+    <div class="ds-thread" data-thread-key="post-ansible-workshop-vagrant-virtualbox" data-title="操练 Ansible 之准备环境" data-url="http://penghongwei.cc/2016/03/30/ansible-workshop-vagrant-virtualbox/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -314,11 +315,11 @@ Ansible
     <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js" type="text/javascript"></script>
+<script src="/js/script.js"></script>
 
 <div id="totop" style="position:fixed;bottom:150px;right:50px;cursor:pointer;z-index:1;">
   <a title="返回顶部"><img src="/imgs/back-to-top.png" style="width:32px;height:32px;"/></a>
