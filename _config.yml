@@ -4,7 +4,7 @@
 
 # Site
 title: 谋事在人，成事在天
-subtitle: Better late than never
+subtitle: 
 description: 立志成为全栈工程师一线码农的学习笔记，乐于与大家分享探讨技术话题。
 author: Peng Hongwei
 language:
@@ -12,7 +12,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://blog.penghongwei.cc
+url: http://husband.penghongwei.cc
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
