@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>谋事在人，成事在天</title>
-  <subtitle>Better late than never</subtitle>
+  
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://blog.penghongwei.cc/"/>
+  <link href="http://husband.penghongwei.cc/"/>
   <updated>2016-05-27T07:38:04.000Z</updated>
-  <id>http://blog.penghongwei.cc/</id>
+  <id>http://husband.penghongwei.cc/</id>
   
   <author>
     <name>Peng Hongwei</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>操练 Ansible 之准备环境</title>
-    <link href="http://blog.penghongwei.cc/2016/03/30/ansible-workshop-vagrant-virtualbox/"/>
-    <id>http://blog.penghongwei.cc/2016/03/30/ansible-workshop-vagrant-virtualbox/</id>
+    <link href="http://husband.penghongwei.cc/2016/03/30/ansible-workshop-vagrant-virtualbox/"/>
+    <id>http://husband.penghongwei.cc/2016/03/30/ansible-workshop-vagrant-virtualbox/</id>
     <published>2016-03-30T15:12:59.000Z</published>
     <updated>2016-05-27T07:38:04.000Z</updated>
     
@@ -69,19 +69,19 @@
     
     </summary>
     
-      <category term="DevOps" scheme="http://blog.penghongwei.cc/categories/DevOps/"/>
+      <category term="DevOps" scheme="http://husband.penghongwei.cc/categories/DevOps/"/>
     
     
-      <category term="Ansible" scheme="http://blog.penghongwei.cc/tags/Ansible/"/>
+      <category term="Ansible" scheme="http://husband.penghongwei.cc/tags/Ansible/"/>
     
-      <category term="Vagrant" scheme="http://blog.penghongwei.cc/tags/Vagrant/"/>
+      <category term="Vagrant" scheme="http://husband.penghongwei.cc/tags/Vagrant/"/>
     
   </entry>
   
   <entry>
     <title>多个 ng-app 中 Controllers &amp; Services 之间的通信</title>
-    <link href="http://blog.penghongwei.cc/2016/01/31/communication-between-multiple-angular-apps/"/>
-    <id>http://blog.penghongwei.cc/2016/01/31/communication-between-multiple-angular-apps/</id>
+    <link href="http://husband.penghongwei.cc/2016/01/31/communication-between-multiple-angular-apps/"/>
+    <id>http://husband.penghongwei.cc/2016/01/31/communication-between-multiple-angular-apps/</id>
     <published>2016-01-31T14:15:32.000Z</published>
     <updated>2016-02-16T02:13:03.000Z</updated>
     
@@ -119,19 +119,19 @@
     
     </summary>
     
-      <category term="Web 前端" scheme="http://blog.penghongwei.cc/categories/Web-%E5%89%8D%E7%AB%AF/"/>
+      <category term="Web 前端" scheme="http://husband.penghongwei.cc/categories/Web-%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="JavaScript" scheme="http://blog.penghongwei.cc/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="http://husband.penghongwei.cc/tags/JavaScript/"/>
     
-      <category term="AngularJS" scheme="http://blog.penghongwei.cc/tags/AngularJS/"/>
+      <category term="AngularJS" scheme="http://husband.penghongwei.cc/tags/AngularJS/"/>
     
   </entry>
   
   <entry>
     <title>[译]成为 JavaScript 忍者</title>
-    <link href="http://blog.penghongwei.cc/2016/01/16/becoming-a-javascript-ninja/"/>
-    <id>http://blog.penghongwei.cc/2016/01/16/becoming-a-javascript-ninja/</id>
+    <link href="http://husband.penghongwei.cc/2016/01/16/becoming-a-javascript-ninja/"/>
+    <id>http://husband.penghongwei.cc/2016/01/16/becoming-a-javascript-ninja/</id>
     <published>2016-01-16T02:13:29.000Z</published>
     <updated>2016-01-31T14:35:05.000Z</updated>
     
@@ -271,17 +271,17 @@
     
     </summary>
     
-      <category term="Web 前端" scheme="http://blog.penghongwei.cc/categories/Web-%E5%89%8D%E7%AB%AF/"/>
+      <category term="Web 前端" scheme="http://husband.penghongwei.cc/categories/Web-%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="JavaScript" scheme="http://blog.penghongwei.cc/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="http://husband.penghongwei.cc/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://blog.penghongwei.cc/2016/01/03/hello-world/"/>
-    <id>http://blog.penghongwei.cc/2016/01/03/hello-world/</id>
+    <link href="http://husband.penghongwei.cc/2016/01/03/hello-world/"/>
+    <id>http://husband.penghongwei.cc/2016/01/03/hello-world/</id>
     <published>2016-01-03T02:13:29.000Z</published>
     <updated>2016-01-19T00:29:28.000Z</updated>
     
