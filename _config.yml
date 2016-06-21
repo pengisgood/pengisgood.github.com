@@ -4,15 +4,15 @@
 
 # Site
 title: 谋事在人，成事在天
-subtitle: 
+subtitle:
 description: 立志成为全栈工程师一线码农的学习笔记，乐于与大家分享探讨技术话题。
-author: Peng Hongwei
+author: 彭洪伟（pengisgood）
 language:
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://husband.penghongwei.cc
+url: http://blog.penghongwei.cc
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
