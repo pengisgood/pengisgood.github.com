@@ -5,15 +5,37 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.penghongwei.cc/"/>
-  <updated>2016-05-27T07:38:04.000Z</updated>
+  <updated>2016-06-21T13:32:43.000Z</updated>
   <id>http://blog.penghongwei.cc/</id>
   
   <author>
-    <name>Peng Hongwei</name>
+    <name>彭洪伟（pengisgood）</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ES6 30 分钟入门教程</title>
+    <link href="http://blog.penghongwei.cc/2016/06/21/learn-es6-in-30-minutes/"/>
+    <id>http://blog.penghongwei.cc/2016/06/21/learn-es6-in-30-minutes/</id>
+    <published>2016-06-21T13:29:02.000Z</published>
+    <updated>2016-06-21T13:32:43.000Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Web 前端" scheme="http://blog.penghongwei.cc/categories/Web-%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="JavaScript" scheme="http://blog.penghongwei.cc/tags/JavaScript/"/>
+    
+      <category term="ES6" scheme="http://blog.penghongwei.cc/tags/ES6/"/>
+    
+  </entry>
   
   <entry>
     <title>操练 Ansible 之准备环境</title>

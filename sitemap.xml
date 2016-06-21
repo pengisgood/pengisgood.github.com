@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.penghongwei.cc/2016/06/21/learn-es6-in-30-minutes/</loc>
+    
+    <lastmod>2016-06-21T13:32:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.penghongwei.cc/2016/03/30/ansible-workshop-vagrant-virtualbox/</loc>
     
     <lastmod>2016-05-27T07:38:04.000Z</lastmod>
