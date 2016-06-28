@@ -5,7 +5,7 @@ tags: [Ansible, Vagrant]
 categories: DevOps
 ---
 
-![](../imgs/knives.jpg)
+![](/imgs/knives.jpg)
 
 工欲善其事，必先利其器。在正式开始操练 Ansible 之前，我们得准备好相应的环境，安装一些软件：
 * [Vagrant](https://www.vagrantup.com/downloads.html)
@@ -67,7 +67,7 @@ end
 ```
 
 这里的 `testBox` 就是我们在执行 `vagrant init testBox` 时指定的名字。我们在用 Ansible 配置 Nginx 之前，需要先让虚拟机暴露80和443端口以便在 host 机器上能够访问，接下来我们将 host 机器上的8080和8443分别 forward 到 guest 机器（也就是我们用 vagrant 启动的虚拟机）的80和443端口上。如下图所示。
-![](../imgs/forward-port.jpg)
+![](/imgs/forward-port.jpg)
 
 为了达到这个效果，最终只需要在 Vagrantfile 中添加两行配置即可，如下：
 
@@ -89,8 +89,8 @@ $ vagrant reload
 
 ### Vagrant
 Vagrant 的常用命令如下图所示：
-![](../imgs/vagrant-command.png)
+![](/imgs/vagrant-command.png)
 
 ### Ansible
 Ansible 命令的基本参数如下图所示：
-![](../imgs/ansible-command-args.png)
+![](/imgs/ansible-command-args.png)
