@@ -30,11 +30,11 @@ Ansible
 
 1. 安装虚拟机安装好 VirtualBox 之后，我们需要在里面安装一台 Linux 的虚拟机，为了能够很方便的创建和配置虚拟机，我们可以让 Vagrant 来帮助我们。
 当这两样都安装好之后，开始使用 Vagrant 安装虚拟机。一般">
-<meta property="og:image" content="http://blog.penghongwei.cc/../imgs/knives.jpg">
-<meta property="og:image" content="http://blog.penghongwei.cc/../imgs/forward-port.jpg">
-<meta property="og:image" content="http://blog.penghongwei.cc/../imgs/vagrant-command.png">
-<meta property="og:image" content="http://blog.penghongwei.cc/../imgs/ansible-command-args.png">
-<meta property="og:updated_time" content="2016-05-27T07:38:04.000Z">
+<meta property="og:image" content="http://blog.penghongwei.cc/imgs/knives.jpg">
+<meta property="og:image" content="http://blog.penghongwei.cc/imgs/forward-port.jpg">
+<meta property="og:image" content="http://blog.penghongwei.cc/imgs/vagrant-command.png">
+<meta property="og:image" content="http://blog.penghongwei.cc/imgs/ansible-command-args.png">
+<meta property="og:updated_time" content="2016-06-28T13:57:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="操练 Ansible 之准备环境">
 <meta name="twitter:description" content="工欲善其事，必先利其器。在正式开始操练 Ansible 之前，我们得准备好相应的环境，安装一些软件：
@@ -45,7 +45,7 @@ Ansible
 
 1. 安装虚拟机安装好 VirtualBox 之后，我们需要在里面安装一台 Linux 的虚拟机，为了能够很方便的创建和配置虚拟机，我们可以让 Vagrant 来帮助我们。
 当这两样都安装好之后，开始使用 Vagrant 安装虚拟机。一般">
-<meta name="twitter:image" content="http://blog.penghongwei.cc/../imgs/knives.jpg">
+<meta name="twitter:image" content="http://blog.penghongwei.cc/imgs/knives.jpg">
 <meta name="twitter:creator" content="@pengisgood">
 <link rel="publisher" href="pengisgood">
   
@@ -118,7 +118,7 @@ Ansible
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="../imgs/knives.jpg" alt=""></p>
+        <p><img src="/imgs/knives.jpg" alt=""></p>
 <p>工欲善其事，必先利其器。在正式开始操练 Ansible 之前，我们得准备好相应的环境，安装一些软件：</p>
 <ul>
 <li><a href="https://www.vagrantup.com/downloads.html" target="_blank" rel="external">Vagrant</a></li>
@@ -139,13 +139,13 @@ Ansible
 <p>如果你的网络条件不是很好，建议采用离线安装的方式。</p>
 <h2 id="2-配置虚拟机"><a href="#2-配置虚拟机" class="headerlink" title="2. 配置虚拟机"></a>2. 配置虚拟机</h2><p>在我们通过离线安装的过程中，完成 <code>vagrant box add testBox /path/to/box_name.box</code> 之后，可以通过 <code>vagrant box list</code> 查看已经添加的 box。然后可以让 Vagrant执行 <code>vagrant init testBox</code> 帮我们生成一个默认的配置文件，执行完之后打开当前目录下的 <code>Vagrantfile</code>，内容应该如下（注释已被省略）：</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Vagrant.configure(<span class="number">2</span>) <span class="keyword">do</span> <span class="params">|config|</span></span><br><span class="line">  config.vm.box = <span class="string">"testBox"</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<p>这里的 <code>testBox</code> 就是我们在执行 <code>vagrant init testBox</code> 时指定的名字。我们在用 Ansible 配置 Nginx 之前，需要先让虚拟机暴露80和443端口以便在 host 机器上能够访问，接下来我们将 host 机器上的8080和8443分别 forward 到 guest 机器（也就是我们用 vagrant 启动的虚拟机）的80和443端口上。如下图所示。<br><img src="../imgs/forward-port.jpg" alt=""></p>
+<p>这里的 <code>testBox</code> 就是我们在执行 <code>vagrant init testBox</code> 时指定的名字。我们在用 Ansible 配置 Nginx 之前，需要先让虚拟机暴露80和443端口以便在 host 机器上能够访问，接下来我们将 host 机器上的8080和8443分别 forward 到 guest 机器（也就是我们用 vagrant 启动的虚拟机）的80和443端口上。如下图所示。<br><img src="/imgs/forward-port.jpg" alt=""></p>
 <p>为了达到这个效果，最终只需要在 Vagrantfile 中添加两行配置即可，如下：</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Vagrant.configure(<span class="number">2</span>) <span class="keyword">do</span> <span class="params">|config|</span></span><br><span class="line">  config.vm.box = <span class="string">"testBox"</span></span><br><span class="line">  config.vm.network <span class="string">"forwarded_port"</span>, <span class="symbol">guest:</span> <span class="number">80</span>, <span class="symbol">host:</span> <span class="number">8080</span></span><br><span class="line">  config.vm.network <span class="string">"forwarded_port"</span>, <span class="symbol">guest:</span> <span class="number">443</span>, <span class="symbol">host:</span> <span class="number">8443</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 <p>完成修改后，需要执行如下操作来告诉 Vagrant 让配置生效：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant reload</span><br></pre></td></tr></table></figure>
-<h2 id="3-附录"><a href="#3-附录" class="headerlink" title="3. 附录"></a>3. 附录</h2><h3 id="Vagrant"><a href="#Vagrant" class="headerlink" title="Vagrant"></a>Vagrant</h3><p>Vagrant 的常用命令如下图所示：<br><img src="../imgs/vagrant-command.png" alt=""></p>
-<h3 id="Ansible"><a href="#Ansible" class="headerlink" title="Ansible"></a>Ansible</h3><p>Ansible 命令的基本参数如下图所示：<br><img src="../imgs/ansible-command-args.png" alt=""></p>
+<h2 id="3-附录"><a href="#3-附录" class="headerlink" title="3. 附录"></a>3. 附录</h2><h3 id="Vagrant"><a href="#Vagrant" class="headerlink" title="Vagrant"></a>Vagrant</h3><p>Vagrant 的常用命令如下图所示：<br><img src="/imgs/vagrant-command.png" alt=""></p>
+<h3 id="Ansible"><a href="#Ansible" class="headerlink" title="Ansible"></a>Ansible</h3><p>Ansible 命令的基本参数如下图所示：<br><img src="/imgs/ansible-command-args.png" alt=""></p>
 
       
     </div>
