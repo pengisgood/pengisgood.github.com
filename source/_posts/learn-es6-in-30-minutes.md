@@ -12,7 +12,7 @@ categories: Web 前端
 
 ## ECMAScript 和 JavaScript 是什么关系？
 
-ES6，全称为 ECMAScript 6（也叫 ES2015，因为是2015年发布的）。用一句话概括它们二者之间的关系为：ECMAScript 是 JavaScript 的规格，JavaScript 是 ECMAScript 的实现。既然 ECAMScript 是规格，想必它的的实现应该不止一种，比如微软的 JScript 和 Macromedia（现已被 Adobe 收购）的 ActionScript。更加详细的历史渊源请移步 [Wikipedia](https://en.wikipedia.org/wiki/ECMAScript)。
+ES6，规范中称之为 ECMAScript 2015（因为是2015年发布的，简称 ES 2015），又因为是该标准的第六版，所有也叫 ECMAScript 6，或者 ES 6。本文纯粹为了少敲几个字符，统一使用 ES6。用一句话概括它们二者之间的关系为：ECMAScript 是 JavaScript 的规格，JavaScript 是 ECMAScript 的实现。既然 ECAMScript 是规格，想必它的的实现应该不止一种，比如微软的 JScript 和 Macromedia（现已被 Adobe 收购）的 ActionScript。更加详细的历史渊源请移步 [Wikipedia](https://en.wikipedia.org/wiki/ECMAScript)。
 
 <!--more-->
 
@@ -277,7 +277,7 @@ Iterator的遍历过程是这样的:
 
 ES6 提出的 `class` 语法糖，在很大程度上方便了面向对象编程，但是并没有解决模块化的问题。追溯 JavaScript 的历史，一直没有添加对模块化的支持，导致在构建大型的复杂的系统时，拆分依赖，按需加载都不是很容易的事情。这也是为什么各大公司、社区争相放出各种规范的原因，比如 AMD、CMD。
 
-ES6模块的设计思想，是尽量的静态化，使得在编译时就能确定模块的依赖关系，以及输入和输出的变量。而CommonJS和AMD模块，都只能在运行时确定这些东西，所以不能很好的实现按需加载。ES6的模块不是对象，而是通过 `export` 命令显式指定输出的代码，输入时也采用静态命令的形式。
+ES6模块的设计思想，是尽量的静态化，使得在编译时就能确定模块的依赖关系，以及输入和输出的变量。而CommonJS和AMD模块，都只能在运行时确定这些东西，所以不能很好的实现按需加载。ES6的模块不是对象，而是通过 `export` 语句显式指定输出的代码，输入时也采用静态命令的形式。
 
 ```javascript
 // ES6模块
@@ -286,9 +286,9 @@ import {sin, cos} from 'Math';
 
 * export
 
-模块功能主要由两个命令构成： `export` 和 `import` 。 `export` 命令用于规定模块的对外接口， `import` 命令用于输入其他模块提供的功能。
+模块功能主要由两个语句构成： `export` 和 `import` 。 `export` 语句用于规定模块的对外接口， `import` 语句用于输入其他模块提供的功能。
 
-一个模块就是一个独立的文件。该文件内部的所有变量，外部无法获取。如果你希望外部能够读取模块内部的某个变量，就必须使用 `export` 关键字输出该变量。下面是一个JS文件，里面使用 `export` 命令输出变量。
+一个模块就是一个独立的文件。该文件内部的所有变量，外部无法获取。如果你希望外部能够读取模块内部的某个变量，就必须使用 `export` 语句输出该变量。下面是一个JS文件，里面使用 `export` 语句输出变量。
 
 ```javascript
 //profile.js
@@ -322,7 +322,7 @@ export {
 
 * import
 
-使用 `export` 命令定义了模块的对外接口以后，其他JS文件就可以通过 `import` 命令加载这个模块（文件）。
+使用 `export` 语句定义了模块的对外接口以后，其他JS文件就可以通过 `import` 语句加载这个模块（文件）。
 
 ```javascript
 // main.js
@@ -365,7 +365,7 @@ function circumference(radius) {
 export {area, circumference};
 ```
 
-现在我们需要加载 circle.js 里面所有的方法。一种是在 `import` 的时候列出所有的方法；另一种是使用星号代替所有。
+现在我们需要加载 circle.js 里面所有的函数。一种是在 `import` 的时候列出所有的函数；另一种是使用星号代替所有。
 
 ```javascript
 // main.js
@@ -384,7 +384,7 @@ console.log('圆周长：' + circle.circumference(14));
 
 * export default
 
-从前面的例子中，我们可以看到，想要 `import` 部分方法的时候，类库的使用者必须要知道其中到底包含了哪些方法。这个时候为了给使用提供方便，我们可以使用 `export default`来为模块指定默认输出参数。
+从前面的例子中，我们可以看到，想要 `import` 部分函数的时候，类库的使用者必须要知道其中到底包含了哪些函数。这个时候为了给使用者提供方便，我们可以使用 `export default`来为模块指定默认输出参数。
 
 ```javascript
 // export-default.js
@@ -397,7 +397,7 @@ import customName from './export-default';
 customName(); // 'foo'
 ```
 
-上面的 `export` 中声明了一个匿名函数，然后输出为默认值。所以在 `import` 的时候我们可以指定任意名字，因此这时 `import` 命令后面，不使用大括号。当然 `export default` 也适用于非匿名函数。
+上面的 `export` 中声明了一个匿名函数，然后输出为默认值。所以在 `import` 的时候我们可以指定任意名字，因此这时 `import` 语句后面，不使用大括号。当然 `export default` 也适用于非匿名函数。
 
 ```javascript
 // export-default.js
@@ -412,7 +412,7 @@ function foo() {
 export default foo;
 ```
 
-上面例子中，函数名 `foo` 只在模块内部有效。加载的时候也会被视同为匿名函数。其实本质上，`export default`就是输出一个叫做`default`的变量或方法，然后系统允许你为它取任意名字。
+上面例子中，函数名 `foo` 只在模块内部有效。加载的时候也会被视同为匿名函数。其实本质上，`export default`就是输出一个叫做`default`的变量或函数，然后系统允许你为它取任意名字。
 
 ### 8. 其他
 
