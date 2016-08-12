@@ -6,14 +6,16 @@ categories: Web 前端
 ---
 > 原文链接：[https://www.sitepoint.com/whats-difference-sass-scss/](https://www.sitepoint.com/whats-difference-sass-scss/)
 
-I’ve written a lot lately on Sass, but some recent comments made it clear that not everyone knows exactly what Sass refers to. Here’s a bit of clarity:
+我近期[写了很多](http://www.sitepoint.com/author/hgiraudel/)关于 Sass 的文章，但是最近的一些评论显现出并不是每个人都清楚地知道 Sass 指的是什么。这里做一些澄清。
 
-When we talk about Sass, we usually refer to the preprocessor and the language as a whole. We’ll say, for example, “we are using Sass”, or “here is a Sass mixin”. Meanwhile, Sass (the preprocessor) allows two different syntaxes:
+当我们谈到 Sass 的时候，通常指的是预处理器（preprocessor）和语言整体。比如我们会说，“我们在用 Sass”，或者 “这是一个 Sass mixin”。同时，Sass（这里指预处理器）允许两种不同的语法：
 
-Sass, also known as the indented syntax
-SCSS, a CSS-like syntax
-History
-Initially, Sass was part of another preprocessor called Haml, designed and written by Ruby developers. Because of that, Sass stylesheets were using a Ruby-like syntax with no braces, no semi-colons and a strict indentation, like this:
+* **Sass**，也叫缩进语法
+* **SCSS**，类 CSS 语法
+
+## 溯源
+
+最开始，Sass 是 [Haml](http://haml.info/) 预处理器的一部分，是由 Ruby 程序员设计和编写的。因此，Sass 样式表用的是类 Ruby 语法，没有花括号、分号并且严格控制缩进，像这样：
 
 ```sass
 // Variable
@@ -34,9 +36,9 @@ Initially, Sass was part of another preprocessor called Haml, designed and writt
     +border-radius(5px)
 ```
 
-As you can see, this is quite a change compared to regular CSS! Even if you’re a Sass (the preprocessor) user, you can see this is pretty different from what we are used to. The variable sign is ! and not $, the assignment sign is = and not :. Pretty weird.
+正如你所看到的，这跟普通的 CSS 差别很大！即使你是一个 Sass（这里指预处理器）用户，你也会觉得这和我们过去习惯使用的完全不同。变量符号是 `!` 而不是 `$`，赋值符号是 `=` 而不是 `:`。感觉非常奇怪。
 
-But that’s how Sass looked like until version 3.0 arrived in May 2010, introducing a whole new syntax called SCSS for Sassy CSS. This syntax aimed at closing the gap between Sass and CSS by bringing a CSS-friendly syntax.
+但是直到2010年5月份发布 Sass 3.0，这就是它的模样。Sass 3.0 引入了一种全新的语法叫做 SCSS（Sassy CSS，漂亮的 CSS）。它引入了对 CSS 友好的语法并将消除 Sass 与 CSS 之间的鸿沟作为目标。
 
 ```scss
 // Variable
@@ -60,16 +62,17 @@ $primary-color: hotpink;
 }
 ```
 
-SCSS is definitely closer to CSS than Sass. That being said, Sass maintainers have also worked to make both syntaxes closer to each other by moving ! (variable sign) and = (assignment sign) from the indented syntax to $ and : from SCSS.
+SCSS 肯定比 Sass 更接近 CSS。话虽如此，Sass 的维护者们也一直在努力的将两种语法变得越来越接近。在缩进语法中借鉴 SCSS 中的 `$` 和 `:`，换掉原来的变量符号 `!` 和赋值符号 `=`。
 
-Now, when starting a new project, you may wonder which syntax you should use. Let me enlighten the path and explain the pros and cons of each syntax.
+现在，当你新起一个项目的时候，你也许会纠结应该用哪种语法。让我来成为引路明灯并解释每种语法的优点和缺点。
 
-Pros for Sass indented syntax
-While this syntax might look weird, it has some interesting points. First of all, it is shorter and easier to type. No more braces and semi-colons, you don’t need all that stuff. Even better! No need for @mixin or @include, when a single character is enough: = and +.
+## Sass 缩进语法的优点
 
-Also the Sass syntax enforces clean coding standards by relying on indentation. Because a wrong indent is likely to break the whole .sass stylesheet, it makes sure the code is clean and well formatted at all times. There is one way to write Sass code: the good way.
+即使这种语法看起来有点怪异，它还是有一些有趣的点。首先，输入起来它更**简短**更**容易**。你也不用关心花括号和分号了。甚至都不需要 `@mixin` 和  `@include` 了，只需要一个 `=` 或者 `+` 就足够了。
 
-But beware! Indenting means something in Sass. When indenting a selector, it means it is nested into the previous selector. For instance:
+而且，Sass 语法依赖于缩进，从而**强迫执行整洁代码的标准**。因为一个错误的缩进可能就会破坏整个 `.sass` 样式文件。它每时每刻都能保证代码是整洁的、格式良好的。有一个好的方法去编写 Sass 代码。
+
+但要小心！在 Sass 中，缩进意味着一些重要的东西。当缩进一个选择器的时候，它表示该选择器嵌套在前一个选择器中。比如：
 
 ```sass
 .element-a
@@ -79,7 +82,7 @@ But beware! Indenting means something in Sass. When indenting a selector, it mea
         float: left
 ```
 
-… will output the following CSS:
+它会被编成下面的 CSS：
 
 ```css
 .element-a {
@@ -91,22 +94,24 @@ But beware! Indenting means something in Sass. When indenting a selector, it mea
 }
 ```
 
-The simple fact of pushing .element-b one level to the right means it is a child of .element-a, changing the resulting CSS. Be very careful with your indentation!
+一个简单的事实：将 `.element-b` 往右缩进一个层级意味着将它变成 `.element-a` 的孩子，CSS 也会随着改变。一定要小心你的缩进！
 
-As an aside, I feel like the indentation based syntax will probably suit a Ruby/Python team more than a PHP/Java team (although this is debatable, and I’d love to hear opinions to the contrary).
+作为题外话，我感觉基于缩进的语法可能会更加适合 Ruby、Python 团队，和 PHP、Java 团队相比的话（尽管这是有争论性的，我也很愿意听到对立的意见）。
 
-Pros for SCSS syntax
-For starter, it is fully CSS compliant. It means, you can rename a CSS file in .scss and it will just work. Making SCSS fully compatible with CSS has always been a priority for Sass maintainers since SCSS was released, and this is a big deal in my opinion. Moreover, they try to stick as close as possible to what could become a valid CSS syntax in the future (hence @directives).
+## SCSS 语法的优点
 
-Because SCSS is compatible with CSS, it means there is little to no learning curve. The syntax is already known: after all, it’s just CSS with a few extras. This is important when working with inexperienced developers: they will be able to quickly start coding without knowing the first thing about Sass.
+对于初学者，他对 CSS 是**完全兼容**的。这意味着，你可以直接将 CSS 文件重命名成 `.scss`，并且它能够直接工作。自从 SCSS 发布之后，保持 SCSS 完全兼容 CSS 一直是 Sass 维护者们高优先级的事情，而且我认为这是一件大事情。不仅如此，他们尽可能的贴近任何将来可能成为合法的 CSS 语法（比如 `@directives`）。
 
-Moreover, it is easier to read because it actually makes sense. When you read @mixin, you know it is a mixin declaration; when you see @include, you are calling a mixin. It doesn’t make any shortcuts, and everything makes sense when read out loud.
+因为 SCSS 对 CSS 是兼容的，意味着**几乎没有学习曲线**。这种语法已经人尽皆知了，毕竟它就是 CSS 添加了一些额外的东西。和经验比较欠缺的开发者一起工作，这点非常重要：在完全不了解 Sass 的时候他们就可以快速的开始编码。
 
-Also, almost all existing tools, plugins and demo for Sass are developed using the SCSS syntax. As time goes, this syntax is becoming pro-eminent and the default (if only) choice, mostly for the above reasons. For instance, it is getting quite hard to find a clean syntax highlighter for Sass indented syntax; usually, there is only SCSS available.
+而且，它具有**很强的可读性**因为都有有意义的。当你读到 `@mixin` 的时候，你知道它是一个 `mixin` 的声明；当你看到 `@include` 的时候，你知道正在调用一个  `mixin`。它没有任何简写，当你大声读出来的时候都是有意义的。
 
-Final thoughts
-The choice is up to you, but unless you have really good reasons to code using the indented syntax, I would strongly suggest using SCSS over Sass. Not only is it simpler, but it is also more convenient.
+不仅如此，几乎所有现存的工具、插件和例子的开发都是用 SCSS 语法。随着时间推移，该语法变得卓越并成了默认选项（如果只能有一个选项的话），主要归功于前面的原因。比如，很难为 Sass 缩进语法找到一款简洁的语法高亮的工具。通常，只提供给 SCSS。
 
-I once tried the indented syntax myself and liked it. I liked how short and easy it was. I was actually about to move an entire code base to Sass at work before changing my mind at the last minute. I thank my past-self for halting that move, because it would have been very difficult to work with several of our tools had we used the indented syntax.
+## 结语
 
-Also, please note Sass is never in uppercase, no matter whether you’re talking about the language or the syntax. Meanwhile, SCSS is always in uppercase. Need a reminder? SassnotSASS.com to the rescue!
+选择完全取决于你，但是除非你有特别好的原因去使用缩进语法，不然我会强烈建议你使用 SCSS 语法。它不仅更加简单，也更加方便。
+
+我曾经自己尝试过缩进语法并且很喜欢它。我喜欢它的简单明了。在最后一分钟改变主意之前，我在工作中差点将整个项目都迁移到 Sass 语法。我感谢过去的自己停止了这一举动，因为如果我们使用缩进语法的话它将很难和我们已有的几个工具一起工作。
+
+最后，请注意 Sass 从来都不是全部大写字母的，不论你谈论的是语言还是语法。同时，SCSS 永远都是大写字母。需要一个提醒？让[ SassnotSASS.com ](SassnotSASS.com)来拯救你！
