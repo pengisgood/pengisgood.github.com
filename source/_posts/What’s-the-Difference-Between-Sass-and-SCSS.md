@@ -1,9 +1,11 @@
 ---
-title: [译] Sass 和 SCSS 到底是什么关系？
+title: "[译] Sass 和 SCSS 到底是什么关系？"
 date: 2016-08-11 16:51:37
 tags: [Sass, SCSS]
 categories: Web 前端
 ---
+![](/imgs/scss-vs-sass.jpeg)
+
 > 原文链接：[https://www.sitepoint.com/whats-difference-sass-scss/](https://www.sitepoint.com/whats-difference-sass-scss/)
 
 我近期[写了很多](http://www.sitepoint.com/author/hgiraudel/)关于 Sass 的文章，但是最近的一些评论显现出并不是每个人都清楚地知道 Sass 指的是什么。这里做一些澄清。
@@ -12,6 +14,8 @@ categories: Web 前端
 
 * **Sass**，也叫缩进语法
 * **SCSS**，类 CSS 语法
+
+<!-- more -->
 
 ## 溯源
 
