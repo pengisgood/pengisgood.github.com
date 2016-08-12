@@ -4,7 +4,8 @@ date: 2016-06-21 21:29:02
 tags: [ES6, JavaScript]
 categories: Web 前端
 ---
-![](/imgs/ES6-the-bits-youll-actually-use.png)
+
+<img src="/imgs/ES6-the-bits-youll-actually-use.png" width="100%">
 
 ## 本文目标
 

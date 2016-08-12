@@ -4,7 +4,7 @@ date: 2016-08-11 16:51:37
 tags: [Sass, SCSS]
 categories: Web 前端
 ---
-![](/imgs/scss-vs-sass.jpeg)
+<img src="/imgs/scss-vs-sass.jpeg" width="100%">
 
 > 原文链接：[https://www.sitepoint.com/whats-difference-sass-scss/](https://www.sitepoint.com/whats-difference-sass-scss/)
 

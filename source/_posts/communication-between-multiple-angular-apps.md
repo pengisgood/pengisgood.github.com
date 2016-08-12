@@ -4,10 +4,9 @@ date: 2016-01-31 22:15:32
 tags: [JavaScript, AngularJS]
 categories: Web 前端
 ---
+<img src="/imgs/wu-han-chang-jiang-da-qiao.jpg" width="100%">
 
 通常情况下，在 Angular 的单页面应用中不同的 Controller 或者 Service 之间通信是一件非常容易的事情，因为 Angular 已经给我们提供了一些便利的方法：`$on`，`$emit`，`$broadcast`。
-
-![](/imgs/wu-han-chang-jiang-da-qiao.jpg)
 
 在这里用一个简单的例子来演示一下这三个方法的用途，完整版代码也可以[参考这里](https://plnkr.co/edit/aOHDVE)：
 <!--more-->

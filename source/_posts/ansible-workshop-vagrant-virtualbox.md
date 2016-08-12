@@ -4,8 +4,7 @@ date: 2016-03-30 23:12:59
 tags: [Ansible, Vagrant]
 categories: DevOps
 ---
-
-![](/imgs/knives.jpg)
+<img src="/imgs/knives.jpg" width="100%">
 
 工欲善其事，必先利其器。在正式开始操练 Ansible 之前，我们得准备好相应的环境，安装一些软件：
 * [Vagrant](https://www.vagrantup.com/downloads.html)
