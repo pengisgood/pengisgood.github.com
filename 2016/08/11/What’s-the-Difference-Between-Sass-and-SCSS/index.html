@@ -13,7 +13,7 @@
   <meta name="description" content="原文链接：https://www.sitepoint.com/whats-difference-sass-scss/
 
 我近期写了很多关于 Sass 的文章，但是最近的一些评论显现出并不是每个人都清楚地知道 Sass 指的是什么。这里做一些澄清。
-当我们谈到 Sass 的时候，通常指的是预处理器（preprocessor）和语言整体。比如我们会说，“我们在用 Sass”，或者 “这是一个 Sas">
+当我们谈到 Sass 的时候，通常指的是预处理器（preprocessor）和语言整体。比如我们会说，“我们在用 Sass”，或者 “这是一个 Sa">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[译] Sass 和 SCSS 到底是什么关系？">
 <meta property="og:url" content="http://blog.penghongwei.cc/2016/08/11/What’s-the-Difference-Between-Sass-and-SCSS/index.html">
@@ -21,14 +21,16 @@
 <meta property="og:description" content="原文链接：https://www.sitepoint.com/whats-difference-sass-scss/
 
 我近期写了很多关于 Sass 的文章，但是最近的一些评论显现出并不是每个人都清楚地知道 Sass 指的是什么。这里做一些澄清。
-当我们谈到 Sass 的时候，通常指的是预处理器（preprocessor）和语言整体。比如我们会说，“我们在用 Sass”，或者 “这是一个 Sas">
-<meta property="og:updated_time" content="2016-08-12T06:32:25.000Z">
+当我们谈到 Sass 的时候，通常指的是预处理器（preprocessor）和语言整体。比如我们会说，“我们在用 Sass”，或者 “这是一个 Sa">
+<meta property="og:image" content="http://blog.penghongwei.cc/imgs/scss-vs-sass.jpeg">
+<meta property="og:updated_time" content="2016-08-12T06:37:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[译] Sass 和 SCSS 到底是什么关系？">
 <meta name="twitter:description" content="原文链接：https://www.sitepoint.com/whats-difference-sass-scss/
 
 我近期写了很多关于 Sass 的文章，但是最近的一些评论显现出并不是每个人都清楚地知道 Sass 指的是什么。这里做一些澄清。
-当我们谈到 Sass 的时候，通常指的是预处理器（preprocessor）和语言整体。比如我们会说，“我们在用 Sass”，或者 “这是一个 Sas">
+当我们谈到 Sass 的时候，通常指的是预处理器（preprocessor）和语言整体。比如我们会说，“我们在用 Sass”，或者 “这是一个 Sa">
+<meta name="twitter:image" content="http://blog.penghongwei.cc/imgs/scss-vs-sass.jpeg">
 <meta name="twitter:creator" content="@pengisgood">
 <link rel="publisher" href="pengisgood">
   
@@ -101,7 +103,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
+        <p><img src="/imgs/scss-vs-sass.jpeg" alt=""></p>
+<blockquote>
 <p>原文链接：<a href="https://www.sitepoint.com/whats-difference-sass-scss/" target="_blank" rel="external">https://www.sitepoint.com/whats-difference-sass-scss/</a></p>
 </blockquote>
 <p>我近期<a href="http://www.sitepoint.com/author/hgiraudel/" target="_blank" rel="external">写了很多</a>关于 Sass 的文章，但是最近的一些评论显现出并不是每个人都清楚地知道 Sass 指的是什么。这里做一些澄清。</p>
@@ -110,6 +113,7 @@
 <li><strong>Sass</strong>，也叫缩进语法</li>
 <li><strong>SCSS</strong>，类 CSS 语法</li>
 </ul>
+<a id="more"></a>
 <h2 id="溯源"><a href="#溯源" class="headerlink" title="溯源"></a>溯源</h2><p>最开始，Sass 是 <a href="http://haml.info/" target="_blank" rel="external">Haml</a> 预处理器的一部分，是由 Ruby 程序员设计和编写的。因此，Sass 样式表用的是类 Ruby 语法，没有花括号、分号并且严格控制缩进，像这样：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// Variable</span><br><span class="line">!primary-color= hotpink</span><br><span class="line"></span><br><span class="line">// Mixin</span><br><span class="line">=border-radius(!radius)</span><br><span class="line">    -webkit-border-radius= !radius</span><br><span class="line">    -moz-border-radius= !radius</span><br><span class="line">    border-radius= !radius</span><br><span class="line"></span><br><span class="line">.my-element</span><br><span class="line">    color= !primary-color</span><br><span class="line">    width= 100%</span><br><span class="line">    overflow= hidden</span><br><span class="line"></span><br><span class="line">.my-other-element</span><br><span class="line">    +border-radius(5px)</span><br></pre></td></tr></table></figure>
 <p>正如你所看到的，这跟普通的 CSS 差别很大！即使你是一个 Sass（这里指预处理器）用户，你也会觉得这和我们过去习惯使用的完全不同。变量符号是 <code>!</code> 而不是 <code>$</code>，赋值符号是 <code>=</code> 而不是 <code>:</code>。感觉非常奇怪。</p>

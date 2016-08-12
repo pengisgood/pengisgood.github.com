@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.penghongwei.cc/"/>
-  <updated>2016-08-12T06:32:25.000Z</updated>
+  <updated>2016-08-12T06:37:09.000Z</updated>
   <id>http://blog.penghongwei.cc/</id>
   
   <author>
@@ -20,9 +20,10 @@
     <link href="http://blog.penghongwei.cc/2016/08/11/What%E2%80%99s-the-Difference-Between-Sass-and-SCSS/"/>
     <id>http://blog.penghongwei.cc/2016/08/11/What’s-the-Difference-Between-Sass-and-SCSS/</id>
     <published>2016-08-11T08:51:37.000Z</published>
-    <updated>2016-08-12T06:32:25.000Z</updated>
+    <updated>2016-08-12T06:37:09.000Z</updated>
     
-    <content type="html">&lt;blockquote&gt;
+    <content type="html">&lt;p&gt;&lt;img src=&quot;/imgs/scss-vs-sass.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;原文链接：&lt;a href=&quot;https://www.sitepoint.com/whats-difference-sass-scss/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.sitepoint.com/whats-difference-sass-scss/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;我近期&lt;a href=&quot;http://www.sitepoint.com/author/hgiraudel/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;写了很多&lt;/a&gt;关于 Sass 的文章，但是最近的一些评论显现出并不是每个人都清楚地知道 Sass 指的是什么。这里做一些澄清。&lt;/p&gt;
@@ -31,6 +32,7 @@
 &lt;li&gt;&lt;strong&gt;Sass&lt;/strong&gt;，也叫缩进语法&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;SCSS&lt;/strong&gt;，类 CSS 语法&lt;/li&gt;
 &lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;溯源&quot;&gt;&lt;a href=&quot;#溯源&quot; class=&quot;headerlink&quot; title=&quot;溯源&quot;&gt;&lt;/a&gt;溯源&lt;/h2&gt;&lt;p&gt;最开始，Sass 是 &lt;a href=&quot;http://haml.info/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Haml&lt;/a&gt; 预处理器的一部分，是由 Ruby 程序员设计和编写的。因此，Sass 样式表用的是类 Ruby 语法，没有花括号、分号并且严格控制缩进，像这样：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;// Variable&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;!primary-color= hotpink&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// Mixin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;=border-radius(!radius)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    -webkit-border-radius= !radius&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    -moz-border-radius= !radius&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    border-radius= !radius&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;.my-element&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    color= !primary-color&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    width= 100%&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    overflow= hidden&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;.my-other-element&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    +border-radius(5px)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;正如你所看到的，这跟普通的 CSS 差别很大！即使你是一个 Sass（这里指预处理器）用户，你也会觉得这和我们过去习惯使用的完全不同。变量符号是 &lt;code&gt;!&lt;/code&gt; 而不是 &lt;code&gt;$&lt;/code&gt;，赋值符号是 &lt;code&gt;=&lt;/code&gt; 而不是 &lt;code&gt;:&lt;/code&gt;。感觉非常奇怪。&lt;/p&gt;
@@ -57,8 +59,16 @@
     
     <summary type="html">
     
-      &lt;blockquote&gt;
-&lt;p&gt;原文链接：&lt;a href=&quot;https://www.sitepoint.com/whats-difference-sass-scss/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.sitepoint.co
+      &lt;p&gt;&lt;img src=&quot;/imgs/scss-vs-sass.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;原文链接：&lt;a href=&quot;https://www.sitepoint.com/whats-difference-sass-scss/&quot;&gt;https://www.sitepoint.com/whats-difference-sass-scss/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我近期&lt;a href=&quot;http://www.sitepoint.com/author/hgiraudel/&quot;&gt;写了很多&lt;/a&gt;关于 Sass 的文章，但是最近的一些评论显现出并不是每个人都清楚地知道 Sass 指的是什么。这里做一些澄清。&lt;/p&gt;
+&lt;p&gt;当我们谈到 Sass 的时候，通常指的是预处理器（preprocessor）和语言整体。比如我们会说，“我们在用 Sass”，或者 “这是一个 Sass mixin”。同时，Sass（这里指预处理器）允许两种不同的语法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Sass&lt;/strong&gt;，也叫缩进语法&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SCSS&lt;/strong&gt;，类 CSS 语法&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
