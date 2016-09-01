@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.penghongwei.cc/"/>
-  <updated>2016-08-12T06:41:21.000Z</updated>
+  <updated>2016-09-01T14:51:15.000Z</updated>
   <id>http://blog.penghongwei.cc/</id>
   
   <author>
@@ -14,6 +14,102 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Skype Tricks &amp; Tips</title>
+    <link href="http://blog.penghongwei.cc/2016/09/01/skype-tricks-tips/"/>
+    <id>http://blog.penghongwei.cc/2016/09/01/skype-tricks-tips/</id>
+    <published>2016-09-01T12:39:06.000Z</published>
+    <updated>2016-09-01T14:51:15.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;/imgs/skype.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Skype 作为一个即时聊天工具，相信大家都不陌生。我最早接触 Skype 是为了满足短期在国外给国内的家人朋友打电话报平安的需求。给 Skype 充点合适的点卡，然后就可以以非常划算的资费（反正感觉比开通国际漫游要划算的多）打电话，无论手机还是座机，详情请参考：&lt;a href=&quot;http://skype.gmw.cn/product/productlist.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://skype.gmw.cn/product/productlist.html&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;经过一段时间的使用，本着程序员固有的一股子好奇心，发现了一些 Skype 中的隐藏功能，在这里与大家分享。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;发送隐藏表情&quot;&gt;&lt;a href=&quot;#发送隐藏表情&quot; class=&quot;headerlink&quot; title=&quot;发送隐藏表情&quot;&gt;&lt;/a&gt;发送隐藏表情&lt;/h2&gt;&lt;p&gt;平常我们发送表情符号的时候都是直接在表情选择器中选择一个表情然后按 Enter 键发送，如下图：&lt;br&gt;&lt;img src=&quot;/imgs/skype-hidden-emoticon.png&quot; width=&quot;400px&quot; height=&quot;auto&quot;&gt;&lt;/p&gt;
+&lt;p&gt;这里请注意图中的一个小细节，一个扣篮的英文单词&lt;code&gt;(slamdunk)&lt;/code&gt;引起了我的注意，心想这个和我们常用的&lt;code&gt;:)&lt;/code&gt;、&lt;code&gt;:(&lt;/code&gt;、&lt;code&gt;:P&lt;/code&gt; 是否一样呢？作为程序员的本能反应，我在聊天输入框中尝试输入 &lt;code&gt;(slamdunk)&lt;/code&gt;（注意括号为英文半角的括号）然后按 Enter 键发送，果不其然，效果一样，那么有哪些表情可以通过这种方式输入呢？问过狗哥之后，找到了一堆文章，并且还有意外发现——Skype 中居然还有一些隐藏表情。比如：&lt;code&gt;(wtf)&lt;/code&gt;、&lt;code&gt;(poop)&lt;/code&gt;、&lt;code&gt;(mooning)&lt;/code&gt;、&lt;code&gt;(ie)&lt;/code&gt;、&lt;code&gt;(win10)&lt;/code&gt;、&lt;code&gt;(smoking)&lt;/code&gt;、&lt;code&gt;(finger)&lt;/code&gt;。&lt;br&gt;&lt;img src=&quot;/imgs/skype-hidden-emoticon-1.png&quot; width=&quot;400px&quot; height=&quot;auto&quot;&gt;&lt;img src=&quot;/imgs/skype-hidden-emoticon-2.png&quot; width=&quot;400px&quot; height=&quot;auto&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;发送国旗符号&quot;&gt;&lt;a href=&quot;#发送国旗符号&quot; class=&quot;headerlink&quot; title=&quot;发送国旗符号&quot;&gt;&lt;/a&gt;发送国旗符号&lt;/h2&gt;&lt;p&gt;与前面的发送隐藏表情类似，我们还可以在聊天中发送国旗符号，以&lt;code&gt;(flag:XY)&lt;/code&gt;的格式，其中 XY 为国家的代码，比如 CN-中国，US-美国，BR-巴西，可以在这里查询&lt;a href=&quot;https://countrycode.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://countrycode.org/&lt;/a&gt;。&lt;br&gt;&lt;img src=&quot;/imgs/skype-country-flag.png&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;设置文字格式&quot;&gt;&lt;a href=&quot;#设置文字格式&quot; class=&quot;headerlink&quot; title=&quot;设置文字格式&quot;&gt;&lt;/a&gt;设置文字格式&lt;/h2&gt;&lt;p&gt;在 Skype 的聊天过程中，时常会有需要强调的东西，这个时候你是否会想起粗体、斜体、中划线？和 Markdown 类似，Skype 也提供了一些简单的标签。更多请参考&lt;a href=&quot;https://www.nesono.com/node/450&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.nesono.com/node/450&lt;/a&gt;。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;样式&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;例子&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;效果&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;粗体&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;这是 *粗体*&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;这是 &lt;strong&gt;粗体&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;斜体&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;这是 _斜体_&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;这是 &lt;em&gt;斜体&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;中划线&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;这是 ~中划线~&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;这是 &lt;del&gt;中划线&lt;/del&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;高级命令&quot;&gt;&lt;a href=&quot;#高级命令&quot; class=&quot;headerlink&quot; title=&quot;高级命令&quot;&gt;&lt;/a&gt;高级命令&lt;/h2&gt;&lt;p&gt;Skype 的聊天框不仅仅只是一个聊天框，就像很多游戏的聊天窗口一样（据我所知，很多游戏的聊天输入框都支持一些特殊命令，只是你不知道而已），Skype 也一样。&lt;br&gt;你可以尝试输入&lt;code&gt;/debug&lt;/code&gt; 或者&lt;code&gt;/help&lt;/code&gt;然后按 Enter 键，会有意想不到的结果（私聊和群聊支持的命令有一些不同）。这里举几个常用的命令，更多命令的解释请参考：&lt;a href=&quot;https://support.skype.com/en/faq/FA10042/what-are-chat-commands-and-roles&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://support.skype.com/en/faq/FA10042/what-are-chat-commands-and-roles&lt;/a&gt;。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;命令&lt;/th&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;/get admins&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;找出管理员&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;/get role&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;查看自己的角色&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;/add [skype name]&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;加人，比如&lt;code&gt;/add pengisgood&lt;/code&gt;；如果是以 live 打头的账号，需要加上 live，比如 &lt;code&gt;/add live:pengisgood&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;/kick [skype name]&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;踢人&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;/remotelogout&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;停止推送提醒到其他设备&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;/setrole [Skype Name] SPEAKER &amp;#124; ADMIN&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;设置角色&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://skype.gmw.cn/product/productlist.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://skype.gmw.cn/product/productlist.html&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://skypesmileyscodes.com/hidden-skype-smileys/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://skypesmileyscodes.com/hidden-skype-smileys/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://skypesmileyscodes.com/skype-flags/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://skypesmileyscodes.com/skype-flags/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://countrycode.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://countrycode.org/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.nesono.com/node/450&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.nesono.com/node/450&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://support.skype.com/en/faq/FA10042/what-are-chat-commands-and-roles&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://support.skype.com/en/faq/FA10042/what-are-chat-commands-and-roles&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.reddit.com/r/skype/comments/37ay58/new_wikimarkup_onoff_command/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.reddit.com/r/skype/comments/37ay58/new_wikimarkup_onoff_command/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/imgs/skype.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Skype 作为一个即时聊天工具，相信大家都不陌生。我最早接触 Skype 是为了满足短期在国外给国内的家人朋友打电话报平安的需求。给 Skype 充点合适的点卡，然后就可以以非常划算的资费（反正感觉比开通国际漫游要划算的多）打电话，无论手机还是座机，详情请参考：&lt;a href=&quot;http://skype.gmw.cn/product/productlist.html&quot;&gt;http://skype.gmw.cn/product/productlist.html&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;经过一段时间的使用，本着程序员固有的一股子好奇心，发现了一些 Skype 中的隐藏功能，在这里与大家分享。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Tools" scheme="http://blog.penghongwei.cc/categories/Tools/"/>
+    
+    
+      <category term="Skype" scheme="http://blog.penghongwei.cc/tags/Skype/"/>
+    
+  </entry>
   
   <entry>
     <title>[译] Sass 和 SCSS 到底是什么关系？</title>
@@ -249,9 +345,9 @@
       <category term="Web 前端" scheme="http://blog.penghongwei.cc/categories/Web-%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="ES6" scheme="http://blog.penghongwei.cc/tags/ES6/"/>
-    
       <category term="JavaScript" scheme="http://blog.penghongwei.cc/tags/JavaScript/"/>
+    
+      <category term="ES6" scheme="http://blog.penghongwei.cc/tags/ES6/"/>
     
   </entry>
   
@@ -422,7 +518,7 @@
 &lt;p&gt;&lt;strong&gt; a) 从 JavaScript 代码中移除 HTML：在 JavaScript 中嵌入 HTML 字符串是一种坏的实践。 &lt;/strong&gt;&lt;/p&gt;
 &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; div = &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.getElementById(&lt;span class=&quot;string&quot;&gt;&quot;myDiv&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;div.innerHTML = &lt;span class=&quot;string&quot;&gt;&quot;&amp;lt;h3&amp;gt;Error&amp;lt;/h3&amp;gt;&amp;lt;p&amp;gt;Invalid email adress.&amp;lt;/p&amp;gt;&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;解决这个问题的最佳方式就是通过 AJAX 从服务端加载 HTML 或者甚至从服务端加载客户端模板。有一些像 &lt;code&gt;handlebars.js&lt;/code&gt; 的工具可以帮助你在客户端生成 HTML 的问题，而且不用将 HTML 字符串嵌入到 JavaScript 中。&lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 渲染逻辑&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;RenderJson = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;json, template, container&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; compiledTemplate = Handlebars.compile(template);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; html = compiledTemplate(json);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    $(container).html(&lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    $(container).html(html);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 模板&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; template = &lt;span class=&quot;string&quot;&gt;&quot;&amp;#123;&amp;#123;#each hero&amp;#125;&amp;#125;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;#123;&amp;#123;this.name&amp;#125;&amp;#125;&quot;&lt;/span&gt; +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;&amp;lt;td&amp;gt;&amp;lt;/tr&amp;gt;&amp;#123;&amp;#123;/each&amp;#125;&amp;#125;&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// model&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; json = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    hero : [&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123; name : &lt;span class=&quot;string&quot;&gt;&#39;Batman&#39;&lt;/span&gt; &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123; name : &lt;span class=&quot;string&quot;&gt;&#39;Superman&#39;&lt;/span&gt; &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123; name : &lt;span class=&quot;string&quot;&gt;&#39;Spiderman&#39;&lt;/span&gt; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 调用渲染逻辑&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;RenderJson(json, template, $(&lt;span class=&quot;string&quot;&gt;&#39;#heroes_tbody&#39;&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// DOM where we will insert HTML on rendering&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;table&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;thead&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;tr&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;th&lt;/span&gt;&amp;gt;&lt;/span&gt;Hero&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;th&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;tr&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;thead&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;tbody id=&lt;span class=&quot;string&quot;&gt;&quot;heroes_tbody&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- JS 添加的行 --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;tbody&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;&lt;span class=&quot;regexp&quot;&gt;/table&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 渲染逻辑&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;RenderJson = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;json, template, container&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; compiledTemplate = Handlebars.compile(template);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; html = compiledTemplate(json);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    $(container).html(&lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    $(container).html(html);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 模板&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; template = &lt;span class=&quot;string&quot;&gt;&quot;&amp;#123;&amp;#123;#each hero&amp;#125;&amp;#125;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;#123;&amp;#123;this.name&amp;#125;&amp;#125;&quot;&lt;/span&gt; +&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;&amp;lt;td&amp;gt;&amp;lt;/tr&amp;gt;&amp;#123;&amp;#123;/each&amp;#125;&amp;#125;&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// model&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; json = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    hero : [&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123; name : &lt;span class=&quot;string&quot;&gt;&#39;Batman&#39;&lt;/span&gt; &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123; name : &lt;span class=&quot;string&quot;&gt;&#39;Superman&#39;&lt;/span&gt; &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123; name : &lt;span class=&quot;string&quot;&gt;&#39;Spiderman&#39;&lt;/span&gt; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 调用渲染逻辑&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;RenderJson(json, template, $(&lt;span class=&quot;string&quot;&gt;&#39;#heroes_tbody&#39;&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// DOM where we will insert HTML on rendering&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;table&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;thead&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;th&amp;gt;Hero&amp;lt;/th&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;/thead&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;tbody id=&lt;span class=&quot;string&quot;&gt;&quot;heroes_tbody&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;lt;!-- JS 添加的行 --&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;/tbody&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;&lt;span class=&quot;regexp&quot;&gt;/table&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;strong&gt; b) 将 CSS 从 JavaScript 中移除 &lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;请勿通过 JavaScript 修改 CSS 的属性，尽量只通过 CSS 的类。&lt;/p&gt;
 &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// bad&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;).css( &lt;span class=&quot;string&quot;&gt;&quot;color&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;red&quot;&lt;/span&gt; );&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// good&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;).addClass(&lt;span class=&quot;string&quot;&gt;&#39;redFont&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
