@@ -38,7 +38,7 @@
   }).on('click', '.article-tip-select', function(e){
     e.stopPropagation();
     $('.article-tip-box img').hide();
-    $('#'+$(this).attr('value')).show();
+    $('#'+$(this).attr('data-method')).show();
   }).on('click', '.article-tip-link', function(e){
     e.stopPropagation();
     $('.article-tip-box').show();
