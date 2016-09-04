@@ -157,6 +157,9 @@ body {
 .clear {
   clear: both;
 }
+.hidden {
+  display: none;
+}
 #container {
   position: relative;
 }
@@ -509,9 +512,6 @@ body {
 .article {
   margin: 50px 0;
 }
-.article-inner {
-  overflow: hidden;
-}
 .article-meta:before,
 .article-meta:after {
   content: "";
@@ -732,11 +732,22 @@ a.article-title:hover {
 }
 .article-comment-link {
   float: right;
+  margin-left: 20px;
 }
 .article-comment-link:before {
   content: "\f075";
   font-family: FontAwesome;
   padding-right: 8px;
+}
+.article-tip-link {
+  cursor: pointer;
+  float: right;
+}
+.article-tip-link:before {
+  content: "\ffe5";
+  font-family: FontAwesome;
+  padding-right: 4px;
+  font-weight: bolder;
 }
 .article-share-link {
   cursor: pointer;
@@ -827,6 +838,34 @@ a.article-title:hover {
   font-size: 0.85em;
   line-height: 1.6em;
   margin-top: 0.5em;
+}
+.tip-container {
+  position: relative;
+}
+.tip-container .article-tip-box {
+  position: absolute;
+  display: none;
+  background: #fff;
+  -webkit-box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
+  box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  right: 0;
+  top: 25px;
+  z-index: 1;
+}
+.tip-container .article-tip-box .payment-method {
+  display: block;
+  text-align: center;
+}
+.tip-container .article-tip-box .payment-method input {
+  margin-left: 20px;
+}
+.tip-container .article-tip-box img {
+  width: 200px;
+}
+.tip-container .article-tip-box.on {
+  display: block;
 }
 .article-share-box {
   position: absolute;
