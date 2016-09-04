@@ -33,9 +33,18 @@
 
   // Share
   $('body').on('click', function(){
-    $('.article-share-box.on').removeClass('on');
+    $('.article-tip-box').hide();
+    $('.article-share-box').hide();
+  }).on('click', '.article-tip-select', function(e){
+    e.stopPropagation();
+    $('.article-tip-box img').hide();
+    $('#'+$(this).attr('value')).show();
+  }).on('click', '.article-tip-link', function(e){
+    e.stopPropagation();
+    $('.article-tip-box').show();
   }).on('click', '.article-share-link', function(e){
     e.stopPropagation();
+    $('.article-share-box').show();
 
     var $this = $(this),
       url = $this.attr('data-url'),

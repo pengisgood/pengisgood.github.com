@@ -3,7 +3,6 @@
 
 .article-inner
   @extend $block
-  overflow: hidden
 
 .article-meta
   clearfix()
@@ -165,10 +164,20 @@
 
 .article-comment-link
   float: right
+  margin-left: 20px
   &:before
     content: "\f075"
     font-family: font-icon
     padding-right: 8px
+
+.article-tip-link
+  cursor: pointer
+  float: right
+  &:before
+    content: "\ffe5"
+    font-family: font-icon
+    padding-right: 4px
+    font-weight: bolder
 
 .article-share-link
   cursor: pointer
@@ -230,6 +239,32 @@
   font-size: 0.85em
   line-height: line-height
   margin-top: 0.5em
+
+.tip-container
+  position: relative
+
+  .article-tip-box
+    position: absolute
+    display: none
+    background: #fff
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2)
+    border-radius: 3px
+    right: 0
+    top: 25px
+    z-index: 1
+
+    .payment-method
+      display: block
+      text-align: center
+
+      input
+        margin-left: 20px
+
+    img
+      width: 200px
+
+    &.on
+      display: block
 
 .article-share-box
   position: absolute
