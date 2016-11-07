@@ -1,0 +1,53 @@
+<!-- lean cloud js -->
+<!--refer to: https://leancloud.cn/docs/leanstorage_guide-js.html#更新计数器 -->
+<script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+<script>
+  $(document).ready(function () {
+    // 应用 ID，用来识别应用
+    var APP_ID = 'P73z6DPIAfc1Jrptt0PnMore-gzGzoHsz';
+
+    // 应用 Key，用来校验权限（Web 端可以配置安全域名来保护数据安全）
+    var APP_KEY = '4n4rEhNfzn6RYUbRcpgCus7h';
+
+    // 初始化
+    AV.init({appId: APP_ID, appKey: APP_KEY});
+
+    <% if (is_post()){ %>
+    var query = new AV.Query('PageView');
+    var postId = $('article').data('postId');
+    var postSlug = $('article').attr('id');
+
+    query.equalTo('postId', postId);
+    query.first().then(function (pageView) {
+      if (pageView) {
+        increasePageView(pageView);
+      } else {
+        var PageView = AV.Object.extend('PageView');
+        var pageView = new PageView();
+        pageView.save({
+          postId: postId,
+          postSlug: postSlug,
+          views: 0
+        }).then(function (pageView) {
+          increasePageView(pageView);
+        })
+      }
+    }, function (error) {
+    });
+
+    function increasePageView(pageView) {
+      pageView.increment('views', 1);
+      pageView.fetchWhenSave(true);
+      pageView.save().then(function(pageView){
+        updatePageView(pageView)
+      });
+    }
+    <% } else { %>
+    <% } %>
+
+    function updatePageView(pageView){
+      var id = pageView.get('postSlug');
+      $('#'+id+' .views').html(pageView.get('views'));
+    }
+  });
+</script>

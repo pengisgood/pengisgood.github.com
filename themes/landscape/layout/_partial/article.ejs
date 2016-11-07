@@ -1,4 +1,4 @@
-<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+<article data-post-id="<%= post._id%>" id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
   <div class="article-meta">
     <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
     <%- partial('post/category') %>
@@ -8,6 +8,7 @@
     <% if (post.link || post.title){ %>
       <header class="article-header">
         <%- partial('post/title', {class_name: 'article-title'}) %>
+        <div class="views">0</div>
       </header>
     <% } %>
     <div class="article-entry" itemprop="articleBody">
