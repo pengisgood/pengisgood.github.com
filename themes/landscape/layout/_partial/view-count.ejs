@@ -17,7 +17,7 @@
     var postId = $('article').data('postId');
     var postSlug = $('article').attr('id');
 
-    query.equalTo('postId', postId);
+    query.equalTo('postSlug', postSlug);
     query.first().then(function (pageView) {
       if (pageView) {
         increasePageView(pageView);
@@ -45,18 +45,18 @@
     <% } else if(is_home()) { %>
 
     $('article').map(function (index, article) {
-      return $(article).data('postId');
-    }).toArray().forEach(function (postId) {
+      return $(article).attr('id');
+    }).toArray().forEach(function (postSlug) {
       // 用闭包解决异步的问题
-      (function (postId) {
+      (function (postSlug) {
         var query = new AV.Query('PageView');
-        query.equalTo('postId', postId);
+        query.equalTo('postSlug', postSlug);
         query.first().then(function (pageView) {
           if (pageView) {
             updatePageView(pageView);
           }
         });
-      })(postId);
+      })(postSlug);
     });
     <% } %>
 
