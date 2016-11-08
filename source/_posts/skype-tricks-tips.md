@@ -1,5 +1,5 @@
 ---
-title: Skype Tricks & Tips
+title: Skype 使用小技巧
 date: 2016-09-01 20:39:06
 tags: Skype
 categories: Tools
