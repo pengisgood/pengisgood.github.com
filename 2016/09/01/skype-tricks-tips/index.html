@@ -226,7 +226,7 @@
 
   
     <section id="comments">
-      <div class="ds-thread" data-thread-key="post-skype-tricks-tips-ciskbpb7q0013qbcc5j2rc60q" data-title="Skype 使用小技巧" data-url="http://blog.penghongwei.cc/2016/09/01/skype-tricks-tips/"></div>
+      <div class="ds-thread" data-thread-key="post-skype-tricks-tips" data-title="Skype 使用小技巧" data-url="http://blog.penghongwei.cc/2016/09/01/skype-tricks-tips/"></div>
     </section>
   
 
@@ -384,7 +384,7 @@
     var postId = $('article').data('postId');
     var postSlug = $('article').attr('id');
 
-    query.equalTo('postId', postId);
+    query.equalTo('postSlug', postSlug);
     query.first().then(function (pageView) {
       if (pageView) {
         increasePageView(pageView);

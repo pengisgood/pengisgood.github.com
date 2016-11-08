@@ -183,7 +183,7 @@
 
   
     <section id="comments">
-      <div class="ds-thread" data-thread-key="post-communication-between-multiple-angular-apps-ciskbl82g000cqbcc8eyepq4r" data-title="多个 ng-app 中 Controllers &amp; Services 之间的通信" data-url="http://blog.penghongwei.cc/2016/01/31/communication-between-multiple-angular-apps/"></div>
+      <div class="ds-thread" data-thread-key="post-communication-between-multiple-angular-apps" data-title="多个 ng-app 中 Controllers &amp; Services 之间的通信" data-url="http://blog.penghongwei.cc/2016/01/31/communication-between-multiple-angular-apps/"></div>
     </section>
   
 
@@ -341,7 +341,7 @@
     var postId = $('article').data('postId');
     var postSlug = $('article').attr('id');
 
-    query.equalTo('postId', postId);
+    query.equalTo('postSlug', postSlug);
     query.first().then(function (pageView) {
       if (pageView) {
         increasePageView(pageView);

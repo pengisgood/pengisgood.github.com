@@ -208,7 +208,7 @@ Ansible
 
   
     <section id="comments">
-      <div class="ds-thread" data-thread-key="post-ansible-workshop-vagrant-virtualbox-ciskbl8240001qbcczq2xzj61" data-title="操练 Ansible 之准备环境" data-url="http://blog.penghongwei.cc/2016/03/30/ansible-workshop-vagrant-virtualbox/"></div>
+      <div class="ds-thread" data-thread-key="post-ansible-workshop-vagrant-virtualbox" data-title="操练 Ansible 之准备环境" data-url="http://blog.penghongwei.cc/2016/03/30/ansible-workshop-vagrant-virtualbox/"></div>
     </section>
   
 
@@ -366,7 +366,7 @@ Ansible
     var postId = $('article').data('postId');
     var postSlug = $('article').attr('id');
 
-    query.equalTo('postId', postId);
+    query.equalTo('postSlug', postSlug);
     query.first().then(function (pageView) {
       if (pageView) {
         increasePageView(pageView);

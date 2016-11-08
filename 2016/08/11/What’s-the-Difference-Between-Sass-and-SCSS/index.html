@@ -198,7 +198,7 @@
 
   
     <section id="comments">
-      <div class="ds-thread" data-thread-key="post-What’s-the-Difference-Between-Sass-and-SCSS-ciskbl8290004qbccyp40kmiz" data-title="[译] Sass 和 SCSS 到底是什么关系？" data-url="http://blog.penghongwei.cc/2016/08/11/What’s-the-Difference-Between-Sass-and-SCSS/"></div>
+      <div class="ds-thread" data-thread-key="post-What’s-the-Difference-Between-Sass-and-SCSS" data-title="[译] Sass 和 SCSS 到底是什么关系？" data-url="http://blog.penghongwei.cc/2016/08/11/What’s-the-Difference-Between-Sass-and-SCSS/"></div>
     </section>
   
 
@@ -356,7 +356,7 @@
     var postId = $('article').data('postId');
     var postSlug = $('article').attr('id');
 
-    query.equalTo('postId', postId);
+    query.equalTo('postSlug', postSlug);
     query.first().then(function (pageView) {
       if (pageView) {
         increasePageView(pageView);
