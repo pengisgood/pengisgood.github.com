@@ -69,7 +69,7 @@ Quick">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article data-post-id="ciskbl82a0005qbccbi1h9ds0" id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/01/03/hello-world/" class="article-date">
   <time datetime="2016-01-03T02:13:29.000Z" itemprop="datePublished">Jan 3 2016</time>
@@ -87,6 +87,7 @@ Quick">
     </h1>
   
 
+        <div class="views">0</div>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
@@ -105,7 +106,7 @@ Quick">
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.penghongwei.cc/2016/01/03/hello-world/" data-id="cisom7eya0007g9ccd4v8dg44" class="article-share-link">分享</a>
+      <a data-url="http://blog.penghongwei.cc/2016/01/03/hello-world/" data-id="ciskbl82a0005qbccbi1h9ds0" class="article-share-link">分享</a>
 
       
         <a class="article-tip-link">打赏</a>
@@ -114,7 +115,7 @@ Quick">
       
 
       <div class="tip-container">
-        <div id="cisom7eya0007g9ccd4v8dg44" class="article-tip-box">
+        <div id="ciskbl82a0005qbccbi1h9ds0" class="article-tip-box">
           <div class="payment-method">
             <label for="tip-alipay" class="article-tip-select" data-method="alipay">
               <input id="tip-alipay" name="tip" type="radio" checked/>
@@ -155,7 +156,7 @@ Quick">
 
   
     <section id="comments">
-      <div class="ds-thread" data-thread-key="post-hello-world-cisom7eya0007g9ccd4v8dg44" data-title="Hello World" data-url="http://blog.penghongwei.cc/2016/01/03/hello-world/"></div>
+      <div class="ds-thread" data-thread-key="post-hello-world-ciskbl82a0005qbccbi1h9ds0" data-title="Hello World" data-url="http://blog.penghongwei.cc/2016/01/03/hello-world/"></div>
     </section>
   
 
@@ -293,24 +294,66 @@ Quick">
 
 <script src="/js/backToTop.js"></script>
 
-  </div>
-  
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257186032'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1257186032' type='text/javascript'%3E%3C/script%3E"));</script>
+<!--Lean Cloud-->
+<!-- lean cloud js -->
+<!--refer to: https://leancloud.cn/docs/leanstorage_guide-js.html#更新计数器 -->
 <script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
 <script>
-// 应用 ID，用来识别应用
-var APP_ID = 'P73z6DPIAfc1Jrptt0PnMore-gzGzoHsz';
+  $(document).ready(function () {
+    // 应用 ID，用来识别应用
+    var APP_ID = 'P73z6DPIAfc1Jrptt0PnMore-gzGzoHsz';
 
-// 应用 Key，用来校验权限（Web 端可以配置安全域名来保护数据安全）
-var APP_KEY = '4n4rEhNfzn6RYUbRcpgCus7h';
+    // 应用 Key，用来校验权限（Web 端可以配置安全域名来保护数据安全）
+    var APP_KEY = '4n4rEhNfzn6RYUbRcpgCus7h';
 
-// 初始化
-AV.init({
-appId: APP_ID,
-appKey: APP_KEY
-});
+    // 初始化
+    AV.init({appId: APP_ID, appKey: APP_KEY});
 
+    
+    var query = new AV.Query('PageView');
+    var postId = $('article').data('postId');
+    var postSlug = $('article').attr('id');
+
+    query.equalTo('postId', postId);
+    query.first().then(function (pageView) {
+      if (pageView) {
+        increasePageView(pageView);
+      } else {
+        var PageView = AV.Object.extend('PageView');
+        var pageView = new PageView();
+        pageView.save({
+          postId: postId,
+          postSlug: postSlug,
+          views: 0
+        }).then(function (pageView) {
+          increasePageView(pageView);
+        })
+      }
+    }, function (error) {
+    });
+
+    function increasePageView(pageView) {
+      pageView.increment('views', 1);
+      pageView.fetchWhenSave(true);
+      pageView.save().then(function (pageView) {
+        updatePageView(pageView)
+      });
+    }
+    
+
+    function updatePageView(pageView) {
+      var id = pageView.get('postSlug');
+      $('#' + id + ' .views').html(pageView.get('views'));
+    }
+  })
 </script>
+
+
+  </div>
+  
+<!--CNZZ-->
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+  document.write(unescape("%3Cspan id='cnzz_stat_icon_1257186032'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1257186032' type='text/javascript'%3E%3C/script%3E"));</script>
 
 
 </body>

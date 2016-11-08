@@ -77,7 +77,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-What’s-the-Difference-Between-Sass-and-SCSS" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article data-post-id="ciskbl8290004qbccyp40kmiz" id="post-What’s-the-Difference-Between-Sass-and-SCSS" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/08/11/What’s-the-Difference-Between-Sass-and-SCSS/" class="article-date">
   <time datetime="2016-08-11T08:51:37.000Z" itemprop="datePublished">Aug 11 2016</time>
@@ -99,6 +99,7 @@
     </h1>
   
 
+        <div class="views">0</div>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
@@ -140,7 +141,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.penghongwei.cc/2016/08/11/What’s-the-Difference-Between-Sass-and-SCSS/" data-id="cisom7exz0000g9cci38zazeg" class="article-share-link">分享</a>
+      <a data-url="http://blog.penghongwei.cc/2016/08/11/What’s-the-Difference-Between-Sass-and-SCSS/" data-id="ciskbl8290004qbccyp40kmiz" class="article-share-link">分享</a>
 
       
         <a class="article-tip-link">打赏</a>
@@ -151,7 +152,7 @@
 
 
       <div class="tip-container">
-        <div id="cisom7exz0000g9cci38zazeg" class="article-tip-box">
+        <div id="ciskbl8290004qbccyp40kmiz" class="article-tip-box">
           <div class="payment-method">
             <label for="tip-alipay" class="article-tip-select" data-method="alipay">
               <input id="tip-alipay" name="tip" type="radio" checked/>
@@ -197,7 +198,7 @@
 
   
     <section id="comments">
-      <div class="ds-thread" data-thread-key="post-What’s-the-Difference-Between-Sass-and-SCSS-cisom7exz0000g9cci38zazeg" data-title="[译] Sass 和 SCSS 到底是什么关系？" data-url="http://blog.penghongwei.cc/2016/08/11/What’s-the-Difference-Between-Sass-and-SCSS/"></div>
+      <div class="ds-thread" data-thread-key="post-What’s-the-Difference-Between-Sass-and-SCSS-ciskbl8290004qbccyp40kmiz" data-title="[译] Sass 和 SCSS 到底是什么关系？" data-url="http://blog.penghongwei.cc/2016/08/11/What’s-the-Difference-Between-Sass-and-SCSS/"></div>
     </section>
   
 
@@ -335,24 +336,66 @@
 
 <script src="/js/backToTop.js"></script>
 
-  </div>
-  
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257186032'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1257186032' type='text/javascript'%3E%3C/script%3E"));</script>
+<!--Lean Cloud-->
+<!-- lean cloud js -->
+<!--refer to: https://leancloud.cn/docs/leanstorage_guide-js.html#更新计数器 -->
 <script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
 <script>
-// 应用 ID，用来识别应用
-var APP_ID = 'P73z6DPIAfc1Jrptt0PnMore-gzGzoHsz';
+  $(document).ready(function () {
+    // 应用 ID，用来识别应用
+    var APP_ID = 'P73z6DPIAfc1Jrptt0PnMore-gzGzoHsz';
 
-// 应用 Key，用来校验权限（Web 端可以配置安全域名来保护数据安全）
-var APP_KEY = '4n4rEhNfzn6RYUbRcpgCus7h';
+    // 应用 Key，用来校验权限（Web 端可以配置安全域名来保护数据安全）
+    var APP_KEY = '4n4rEhNfzn6RYUbRcpgCus7h';
 
-// 初始化
-AV.init({
-appId: APP_ID,
-appKey: APP_KEY
-});
+    // 初始化
+    AV.init({appId: APP_ID, appKey: APP_KEY});
 
+    
+    var query = new AV.Query('PageView');
+    var postId = $('article').data('postId');
+    var postSlug = $('article').attr('id');
+
+    query.equalTo('postId', postId);
+    query.first().then(function (pageView) {
+      if (pageView) {
+        increasePageView(pageView);
+      } else {
+        var PageView = AV.Object.extend('PageView');
+        var pageView = new PageView();
+        pageView.save({
+          postId: postId,
+          postSlug: postSlug,
+          views: 0
+        }).then(function (pageView) {
+          increasePageView(pageView);
+        })
+      }
+    }, function (error) {
+    });
+
+    function increasePageView(pageView) {
+      pageView.increment('views', 1);
+      pageView.fetchWhenSave(true);
+      pageView.save().then(function (pageView) {
+        updatePageView(pageView)
+      });
+    }
+    
+
+    function updatePageView(pageView) {
+      var id = pageView.get('postSlug');
+      $('#' + id + ' .views').html(pageView.get('views'));
+    }
+  })
 </script>
+
+
+  </div>
+  
+<!--CNZZ-->
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+  document.write(unescape("%3Cspan id='cnzz_stat_icon_1257186032'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1257186032' type='text/javascript'%3E%3C/script%3E"));</script>
 
 
 </body>
