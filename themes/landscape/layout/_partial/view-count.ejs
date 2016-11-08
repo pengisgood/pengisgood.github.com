@@ -38,16 +38,31 @@
     function increasePageView(pageView) {
       pageView.increment('views', 1);
       pageView.fetchWhenSave(true);
-      pageView.save().then(function(pageView){
+      pageView.save().then(function (pageView) {
         updatePageView(pageView)
       });
     }
-    <% } else { %>
+    <% } else if(is_home()) { %>
+
+    $('article').map(function (index, article) {
+      return $(article).data('postId');
+    }).toArray().forEach(function (postId) {
+      // 用闭包解决异步的问题
+      (function (postId) {
+        var query = new AV.Query('PageView');
+        query.equalTo('postId', postId);
+        query.first().then(function (pageView) {
+          if (pageView) {
+            updatePageView(pageView);
+          }
+        });
+      })(postId);
+    });
     <% } %>
 
-    function updatePageView(pageView){
+    function updatePageView(pageView) {
       var id = pageView.get('postSlug');
-      $('#'+id+' .views').html(pageView.get('views'));
+      $('#' + id + ' .views').html(pageView.get('views'));
     }
-  });
+  })
 </script>
