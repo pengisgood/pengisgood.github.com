@@ -539,6 +539,9 @@ body {
 .article-header {
   padding: 20px 20px 0;
 }
+.article-header h1 {
+  display: inline-block;
+}
 .article-title {
   text-decoration: none;
   font-size: 2em;
@@ -729,15 +732,6 @@ a.article-title:hover {
 }
 .article-tag-list-link:before {
   content: "#";
-}
-.article-comment-link {
-  float: right;
-  margin-left: 20px;
-}
-.article-comment-link:before {
-  content: "\f075";
-  font-family: FontAwesome;
-  padding-right: 8px;
 }
 .article-tip-link {
   cursor: pointer;
@@ -993,6 +987,31 @@ a.article-title:hover {
   display: block;
   max-width: 100%;
   margin: 0 auto;
+}
+.ds-recent-visitors {
+  background-color: #fff;
+  -webkit-box-shadow: 1px 2px 3px #ddd;
+  box-shadow: 1px 2px 3px #ddd;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 10px;
+}
+.views {
+  font-weight: bold;
+  float: right;
+  line-height: 1em;
+  padding: 6px 15px;
+  border: 1px solid;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  background: #fff;
+  color: #999;
+  text-shadow: 0 1px #fff;
+}
+.views:after {
+  font-weight: normal;
+  content: "人阅读";
 }
 #comments {
   background: #fff;
