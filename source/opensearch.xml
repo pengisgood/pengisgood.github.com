@@ -1,0 +1,10 @@
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>I'm Max Peng</ShortName>
+  <Contact>pengisgood@gmail.com</Contact>
+  <Description>
+    Your can search my posts at here.
+  </Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16" type="image/x-icon">your site favicon</Image>
+  <Url type="text/xml" method="get" template="https://www.google.com/search?q={searchTerms}&amp;sitesearch=http://blog.penghongwei.cc#dlnr=1"/>
+</OpenSearchDescription>
