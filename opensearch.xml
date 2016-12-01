@@ -6,5 +6,5 @@
   </Description>
   <InputEncoding>UTF-8</InputEncoding>
   <Image width="16" height="16" type="image/x-icon">your site favicon</Image>
-  <Url type="text/xml" method="get" template="https://www.google.com/search?q={searchTerms}&amp;sitesearch=http://maxpeng.vipcloud.me#dlnr=1"/>
+  <Url type="text/xml" method="get" template="https://www.google.com/search?q={searchTerms}&amp;sitesearch=http://pengisgood.github.io#dlnr=1"/>
 </OpenSearchDescription>
