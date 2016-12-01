@@ -2,7 +2,7 @@
 title: 多个 ng-app 中 Controllers & Services 之间的通信
 date: 2016-01-31 22:15:32
 tags: [JavaScript, AngularJS]
-categories: Web 前端
+categories: Web
 ---
 <img src="/imgs/wu-han-chang-jiang-da-qiao.jpg" width="100%">
 

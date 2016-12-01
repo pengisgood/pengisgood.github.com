@@ -2,7 +2,7 @@
 title: "[译] Sass 和 SCSS 到底是什么关系？"
 date: 2016-08-11 16:51:37
 tags: [Sass, SCSS]
-categories: Web 前端
+categories: Web
 ---
 <img src="/imgs/scss-vs-sass.jpeg" width="100%">
 
