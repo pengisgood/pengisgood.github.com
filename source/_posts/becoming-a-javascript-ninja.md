@@ -1,7 +1,7 @@
 ---
-title: "[译] 成为 JavaScript 忍者"
+title: "成为 JavaScript 忍者"
 date: 2016-01-16 10:13:29
-tags: JavaScript
+tags: [JavaScript, 翻译]
 categories: Web
 ---
 <img src="/imgs/ninja.jpg" width="100%">
