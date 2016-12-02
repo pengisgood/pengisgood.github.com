@@ -10,44 +10,26 @@
   <link rel="search" type="application/opensearchdescription+xml" href="http://maxpeng.vipcloud.me/opensearch.xml" title="Blog Search" />
 
   
-  <title>操练 Ansible 之准备环境 | 谋事在人，成事在天</title>
+  <title>前端性能调优(2) ┃ 使用 CDN | 谋事在人，成事在天</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="工欲善其事，必先利其器。在正式开始操练 Ansible 之前，我们得准备好相应的环境，安装一些软件：
+  <meta name="description" content="原文链接：https://developer.yahoo.com/performance/rules.html#cdn
 
-Vagrant
-VirtualBox
-Ansible
-
-1. 安装虚拟机安装好 VirtualBox 之后，我们需要在里面安装一台 Linux 的虚拟机，为了能够很方便的创建和配置虚拟机，我们可以让 Vagrant 来帮助我们。
-当这两样都安装好之后，开始使用 Vagrant 安装虚拟机。一般">
+用户与Web服务器的距离对响应时间有影响。将你的内容部署在多个地理位置的分布式的服务器上，可以使得用户更快地加载网页。但是你应该从哪里开始呢？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="操练 Ansible 之准备环境">
-<meta property="og:url" content="http://maxpeng.vipcloud.me/2016/03/30/ansible-workshop-vagrant-virtualbox/index.html">
+<meta property="og:title" content="前端性能调优(2) ┃ 使用 CDN">
+<meta property="og:url" content="http://maxpeng.vipcloud.me/2016/12/02/Use-a-Content-Delivery-Network/index.html">
 <meta property="og:site_name" content="谋事在人，成事在天">
-<meta property="og:description" content="工欲善其事，必先利其器。在正式开始操练 Ansible 之前，我们得准备好相应的环境，安装一些软件：
+<meta property="og:description" content="原文链接：https://developer.yahoo.com/performance/rules.html#cdn
 
-Vagrant
-VirtualBox
-Ansible
-
-1. 安装虚拟机安装好 VirtualBox 之后，我们需要在里面安装一台 Linux 的虚拟机，为了能够很方便的创建和配置虚拟机，我们可以让 Vagrant 来帮助我们。
-当这两样都安装好之后，开始使用 Vagrant 安装虚拟机。一般">
-<meta property="og:image" content="http://maxpeng.vipcloud.me/imgs/knives.jpg">
-<meta property="og:image" content="http://maxpeng.vipcloud.me/imgs/forward-port.jpg">
-<meta property="og:image" content="http://maxpeng.vipcloud.me/imgs/vagrant-command.png">
-<meta property="og:image" content="http://maxpeng.vipcloud.me/imgs/ansible-command-args.png">
-<meta property="og:updated_time" content="2016-08-12T06:44:05.000Z">
+用户与Web服务器的距离对响应时间有影响。将你的内容部署在多个地理位置的分布式的服务器上，可以使得用户更快地加载网页。但是你应该从哪里开始呢？">
+<meta property="og:image" content="http://maxpeng.vipcloud.me/imgs/cdn.jpg">
+<meta property="og:updated_time" content="2016-12-02T12:56:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="操练 Ansible 之准备环境">
-<meta name="twitter:description" content="工欲善其事，必先利其器。在正式开始操练 Ansible 之前，我们得准备好相应的环境，安装一些软件：
+<meta name="twitter:title" content="前端性能调优(2) ┃ 使用 CDN">
+<meta name="twitter:description" content="原文链接：https://developer.yahoo.com/performance/rules.html#cdn
 
-Vagrant
-VirtualBox
-Ansible
-
-1. 安装虚拟机安装好 VirtualBox 之后，我们需要在里面安装一台 Linux 的虚拟机，为了能够很方便的创建和配置虚拟机，我们可以让 Vagrant 来帮助我们。
-当这两样都安装好之后，开始使用 Vagrant 安装虚拟机。一般">
-<meta name="twitter:image" content="http://maxpeng.vipcloud.me/imgs/knives.jpg">
+用户与Web服务器的距离对响应时间有影响。将你的内容部署在多个地理位置的分布式的服务器上，可以使得用户更快地加载网页。但是你应该从哪里开始呢？">
+<meta name="twitter:image" content="http://maxpeng.vipcloud.me/imgs/cdn.jpg">
 <meta name="twitter:creator" content="@pengisgood">
 <link rel="publisher" href="pengisgood">
   
@@ -94,14 +76,14 @@ Ansible
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article data-post-id="ciw7sqq7u00053qccgdkt4es3" id="post-ansible-workshop-vagrant-virtualbox" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article data-post-id="ciw7sqq7p00013qcci21glcxf" id="post-Use-a-Content-Delivery-Network" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/03/30/ansible-workshop-vagrant-virtualbox/" class="article-date">
-  <time datetime="2016-03-30T15:12:59.000Z" itemprop="datePublished">Mar 30 2016</time>
+    <a href="/2016/12/02/Use-a-Content-Delivery-Network/" class="article-date">
+  <time datetime="2016-12-02T09:31:47.000Z" itemprop="datePublished">Dec 2 2016</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/DevOps/">DevOps</a>
+    <a class="article-category-link" href="/categories/Web/">Web</a>►<a class="article-category-link" href="/categories/Web/Performance/">Performance</a>
   </div>
 
   </div>
@@ -112,7 +94,7 @@ Ansible
         
   
     <h1 class="article-title" itemprop="name">
-      操练 Ansible 之准备环境
+      前端性能调优(2) ┃ 使用 CDN
     </h1>
   
 
@@ -121,50 +103,40 @@ Ansible
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/imgs/knives.jpg" width="100%"></p>
-<p>工欲善其事，必先利其器。在正式开始操练 Ansible 之前，我们得准备好相应的环境，安装一些软件：</p>
-<ul>
-<li><a href="https://www.vagrantup.com/downloads.html" target="_blank" rel="external">Vagrant</a></li>
-<li><a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="external">VirtualBox</a></li>
-<li><a href="http://docs.ansible.com/ansible/intro_installation.html" target="_blank" rel="external">Ansible</a></li>
-</ul>
-<h2 id="1-安装虚拟机"><a href="#1-安装虚拟机" class="headerlink" title="1. 安装虚拟机"></a>1. 安装虚拟机</h2><p>安装好 VirtualBox 之后，我们需要在里面安装一台 Linux 的虚拟机，为了能够很方便的创建和配置虚拟机，我们可以让 Vagrant 来帮助我们。</p>
-<p>当这两样都安装好之后，开始使用 Vagrant 安装虚拟机。一般来说，有两种方式：在线安装和离线安装。</p>
-<h3 id="在线安装"><a href="#在线安装" class="headerlink" title="在线安装"></a>在线安装</h3><p>Vagrant 社区提供了很多主流的 Linux 发行版对应的 [Box]（<a href="https://atlas.hashicorp.com/boxes/search）。以" target="_blank" rel="external">https://atlas.hashicorp.com/boxes/search）。以</a> Ubuntu 为例，我们可以在前面的这个仓库中搜索到 <a href="https://atlas.hashicorp.com/ubuntu/boxes/trusty64" target="_blank" rel="external">Ubuntu/trusty64</a>，然后我们在命令行中执行以下命令即可开始在线安装。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant init ubuntu/trusty64</span><br><span class="line">$ vagrant up --provider virtualbox</span><br></pre></td></tr></table></figure>
-<p>除此之外，也有一些第三方玩家提供一些 Box，例如：<a href="http://www.vagrantbox.es/" target="_blank" rel="external">Vagrantbox.es</a>，不过使用起来得手动添加 Box 的地址，参考下面的命令：<br><a id="more"></a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant box add &#123;title&#125; &#123;url&#125;</span><br><span class="line">$ vagrant init &#123;title&#125;</span><br><span class="line">$ vagrant up</span><br></pre></td></tr></table></figure>
-<p>一般来说，一个 box 都有好几百兆，如果网络好的话，可以选这两种方式。</p>
-<h3 id="离线安装"><a href="#离线安装" class="headerlink" title="离线安装"></a>离线安装</h3><p>当然，生在红旗下，长在新中国的我们，不是每个人都有这么好的网络条件，那么这个时候离线安装似乎对我们来说更加有利。相信稍有经验的同学已经意识到在线安装的第二种方式稍加变形即可。假设我本地（~/Downloads/test.box）已经有一个 box 文件了，那么我可以下面的方式直接添加本地的 box。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant box add <span class="built_in">test</span>Box ~/Downloads/test.box</span><br><span class="line">$ vagrant init <span class="built_in">test</span>Box</span><br><span class="line">$ vagrant up</span><br></pre></td></tr></table></figure>
-<p>在执行完添加步骤之后，可以通过以下方式查看已经存在的 Box 列表：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant box list</span><br></pre></td></tr></table></figure>
-<p>如果你的网络条件不是很好，建议采用离线安装的方式。</p>
-<h2 id="2-配置虚拟机"><a href="#2-配置虚拟机" class="headerlink" title="2. 配置虚拟机"></a>2. 配置虚拟机</h2><p>在我们通过离线安装的过程中，完成 <code>vagrant box add testBox /path/to/box_name.box</code> 之后，可以通过 <code>vagrant box list</code> 查看已经添加的 box。然后可以让 Vagrant执行 <code>vagrant init testBox</code> 帮我们生成一个默认的配置文件，执行完之后打开当前目录下的 <code>Vagrantfile</code>，内容应该如下（注释已被省略）：</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Vagrant.configure(<span class="number">2</span>) <span class="keyword">do</span> <span class="params">|config|</span></span><br><span class="line">  config.vm.box = <span class="string">"testBox"</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<p>这里的 <code>testBox</code> 就是我们在执行 <code>vagrant init testBox</code> 时指定的名字。我们在用 Ansible 配置 Nginx 之前，需要先让虚拟机暴露80和443端口以便在 host 机器上能够访问，接下来我们将 host 机器上的8080和8443分别 forward 到 guest 机器（也就是我们用 vagrant 启动的虚拟机）的80和443端口上。如下图所示。<br><img src="/imgs/forward-port.jpg" alt=""></p>
-<p>为了达到这个效果，最终只需要在 Vagrantfile 中添加两行配置即可，如下：</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Vagrant.configure(<span class="number">2</span>) <span class="keyword">do</span> <span class="params">|config|</span></span><br><span class="line">  config.vm.box = <span class="string">"testBox"</span></span><br><span class="line">  config.vm.network <span class="string">"forwarded_port"</span>, <span class="symbol">guest:</span> <span class="number">80</span>, <span class="symbol">host:</span> <span class="number">8080</span></span><br><span class="line">  config.vm.network <span class="string">"forwarded_port"</span>, <span class="symbol">guest:</span> <span class="number">443</span>, <span class="symbol">host:</span> <span class="number">8443</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<p>完成修改后，需要执行如下操作来告诉 Vagrant 让配置生效：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant reload</span><br></pre></td></tr></table></figure>
-<h2 id="3-附录"><a href="#3-附录" class="headerlink" title="3. 附录"></a>3. 附录</h2><h3 id="Vagrant"><a href="#Vagrant" class="headerlink" title="Vagrant"></a>Vagrant</h3><p>Vagrant 的常用命令如下图所示：<br><img src="/imgs/vagrant-command.png" alt=""></p>
-<h3 id="Ansible"><a href="#Ansible" class="headerlink" title="Ansible"></a>Ansible</h3><p>Ansible 命令的基本参数如下图所示：<br><img src="/imgs/ansible-command-args.png" alt=""></p>
+        <p><img src="/imgs/cdn.jpg" width="100%"></p>
+<blockquote>
+<p><em>原文链接：<a href="https://developer.yahoo.com/performance/rules.html#cdn" target="_blank" rel="external">https://developer.yahoo.com/performance/rules.html#cdn</a></em></p>
+</blockquote>
+<p>用户与Web服务器的距离对响应时间有影响。将你的内容部署在多个地理位置的分布式的服务器上，可以使得用户更快地加载网页。但是你应该从哪里开始呢？</p>
+<a id="more"></a>
+<p>作为实现从地理的角度分散内容的第一步，不要尝试重新设计你的Web应用程序使其能在分布式体系结构中工作。根据应用程序，更改架构可能会包括艰巨的任务，如跨服务器同步会话状态和复制数据库事务。更改应用程序体系结构可能会使你尝试减少用户和你的内容之间的距离的步骤延迟或者根本通过不了。</p>
+<p>请记住，终端用户的响应时间的80-90％用于下载页面中的所有组件：图片（images)，样式表(stylesheets)，脚本(scripts)，Flash等，这是性能黄金法则。与其从重新设计应用程序架构的艰巨任务开始，最好先分散你的静态内容。这不仅实现了大量缩短响应时间，而且更加简单都归功于内容分发网络。</p>
+<p>内容分发网络（CDN）是分布在多个位置的web服务器的集合，以更高效地向用户分发内容。被选择用于向特定用户分发内容的服务器通常基于网络接近度的测量。例如，选择具有最少网络跳数的服务器或具有最快响应时间的服务器。</p>
+<p>一些大型互联网公司拥有自己的CDN，但使用CDN服务提供商（例如<a href="http://www.akamai.com/" target="_blank" rel="external">Akamai Technologies</a>，<a href="http://www.edgecast.com/" target="_blank" rel="external">EdgeCast</a>或<a href="http://www.level3.com/index.cfm?pageID=36" target="_blank" rel="external">level3</a>）是具有成本效益的。对于初创公司和私人网站，CDN服务的成本可能是令人望而却步的，但是随着您的目标受众变得越来越大并变得越来越全球化，CDN是实现快速响应时间所必需的。在Yahoo!，将静态内容从其应用程序Web服务器迁移到CDN（如上所述的第三方以及Yahoo自己的<a href="https://cwiki.apache.org/TS/traffic-server.html" target="_blank" rel="external">CDN</a>）使得终端用户的响应时间缩短了20％或更多。迁移到CDN是一个相对容易的将会大大提高您的网站的速度的代码更改。</p>
+<h2 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h2><blockquote>
+<h3 id="Use-a-Content-Delivery-Network"><a href="#Use-a-Content-Delivery-Network" class="headerlink" title="Use a Content Delivery Network"></a>Use a Content Delivery Network</h3><p>tag: server</p>
+<p>The user’s proximity to your web server has an impact on response times. Deploying your content across multiple, geographically dispersed servers will make your pages load faster from the user’s perspective. But where should you start?</p>
+<p>As a first step to implementing geographically dispersed content, don’t attempt to redesign your web application to work in a distributed architecture. Depending on the application, changing the architecture could include daunting tasks such as synchronizing session state and replicating database transactions across server locations. Attempts to reduce the distance between users and your content could be delayed by, or never pass, this application architecture step.</p>
+<p>Remember that 80-90% of the end-user response time is spent downloading all the components in the page: images, stylesheets, scripts, Flash, etc. This is the Performance Golden Rule. Rather than starting with the difficult task of redesigning your application architecture, it’s better to first disperse your static content. This not only achieves a bigger reduction in response times, but it’s easier thanks to content delivery networks.</p>
+<p>A content delivery network (CDN) is a collection of web servers distributed across multiple locations to deliver content more efficiently to users. The server selected for delivering content to a specific user is typically based on a measure of network proximity. For example, the server with the fewest network hops or the server with the quickest response time is chosen.</p>
+<p>Some large Internet companies own their own CDN, but it’s cost-effective to use a CDN service provider, such as <a href="http://www.akamai.com/" target="_blank" rel="external">Akamai Technologies</a>, <a href="http://www.edgecast.com/" target="_blank" rel="external">EdgeCast</a>, or <a href="http://www.level3.com/index.cfm?pageID=36" target="_blank" rel="external">level3</a>. For start-up companies and private web sites, the cost of a CDN service can be prohibitive, but as your target audience grows larger and becomes more global, a CDN is necessary to achieve fast response times. At Yahoo!, properties that moved static content off their application web servers to a CDN (both 3rd party as mentioned above as well as Yahoo’s own <a href="https://cwiki.apache.org/TS/traffic-server.html" target="_blank" rel="external">CDN</a>) improved end-user response times by 20% or more. Switching to a CDN is a relatively easy code change that will dramatically improve the speed of your web site.</p>
+</blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://maxpeng.vipcloud.me/2016/03/30/ansible-workshop-vagrant-virtualbox/" data-id="ciw7sqq7u00053qccgdkt4es3" class="article-share-link">分享</a>
+      <a data-url="http://maxpeng.vipcloud.me/2016/12/02/Use-a-Content-Delivery-Network/" data-id="ciw7sqq7p00013qcci21glcxf" class="article-share-link">分享</a>
 
       
         <a class="article-tip-link">打赏</a>
       
 
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ansible/">Ansible</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vagrant/">Vagrant</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Best-Practice/">Best Practice</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/翻译/">翻译</a></li></ul>
 
 
       <div class="tip-container">
-        <div id="ciw7sqq7u00053qccgdkt4es3" class="article-tip-box">
+        <div id="ciw7sqq7p00013qcci21glcxf" class="article-tip-box">
           <div class="payment-method">
             <label for="tip-alipay" class="article-tip-select" data-method="alipay">
               <input id="tip-alipay" name="tip" type="radio" checked/>
@@ -185,19 +157,10 @@ Ansible
     
 <nav id="article-nav">
   
-    <a href="/2016/06/21/learn-es6-in-30-minutes/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          ES6 30 分钟入门教程
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/01/31/communication-between-multiple-angular-apps/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/12/02/Minimize-HTTP-Requests/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">多个 ng-app 中 Controllers &amp; Services 之间的通信</div>
+      <div class="article-nav-title">前端性能调优(1) ┃ 尽可能减少 HTTP 请求</div>
     </a>
   
 </nav>
@@ -210,7 +173,7 @@ Ansible
 
   
     <section id="comments">
-      <div class="ds-thread" data-thread-key="post-ansible-workshop-vagrant-virtualbox" data-title="操练 Ansible 之准备环境" data-url="http://maxpeng.vipcloud.me/2016/03/30/ansible-workshop-vagrant-virtualbox/"></div>
+      <div class="ds-thread" data-thread-key="post-Use-a-Content-Delivery-Network" data-title="前端性能调优(2) ┃ 使用 CDN" data-url="http://maxpeng.vipcloud.me/2016/12/02/Use-a-Content-Delivery-Network/"></div>
     </section>
   
 

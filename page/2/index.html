@@ -69,7 +69,86 @@
       <div class="outer">
         <section id="main">
   
-    <article data-post-id="ciw7juqdj0007njccs7dezjob" id="post-communication-between-multiple-angular-apps" class="article article-type-post" itemscope itemprop="blogPost">
+    <article data-post-id="ciw7sqq7u00053qccgdkt4es3" id="post-ansible-workshop-vagrant-virtualbox" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/30/ansible-workshop-vagrant-virtualbox/" class="article-date">
+  <time datetime="2016-03-30T15:12:59.000Z" itemprop="datePublished">Mar 30 2016</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/DevOps/">DevOps</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/30/ansible-workshop-vagrant-virtualbox/">操练 Ansible 之准备环境</a>
+    </h1>
+  
+
+        <div class="views">0</div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/imgs/knives.jpg" width="100%"></p>
+<p>工欲善其事，必先利其器。在正式开始操练 Ansible 之前，我们得准备好相应的环境，安装一些软件：</p>
+<ul>
+<li><a href="https://www.vagrantup.com/downloads.html">Vagrant</a></li>
+<li><a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a></li>
+<li><a href="http://docs.ansible.com/ansible/intro_installation.html">Ansible</a></li>
+</ul>
+<h2 id="1-安装虚拟机"><a href="#1-安装虚拟机" class="headerlink" title="1. 安装虚拟机"></a>1. 安装虚拟机</h2><p>安装好 VirtualBox 之后，我们需要在里面安装一台 Linux 的虚拟机，为了能够很方便的创建和配置虚拟机，我们可以让 Vagrant 来帮助我们。</p>
+<p>当这两样都安装好之后，开始使用 Vagrant 安装虚拟机。一般来说，有两种方式：在线安装和离线安装。</p>
+<h3 id="在线安装"><a href="#在线安装" class="headerlink" title="在线安装"></a>在线安装</h3><p>Vagrant 社区提供了很多主流的 Linux 发行版对应的 [Box]（<a href="https://atlas.hashicorp.com/boxes/search）。以">https://atlas.hashicorp.com/boxes/search）。以</a> Ubuntu 为例，我们可以在前面的这个仓库中搜索到 <a href="https://atlas.hashicorp.com/ubuntu/boxes/trusty64">Ubuntu/trusty64</a>，然后我们在命令行中执行以下命令即可开始在线安装。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant init ubuntu/trusty64</span><br><span class="line">$ vagrant up --provider virtualbox</span><br></pre></td></tr></table></figure>
+<p>除此之外，也有一些第三方玩家提供一些 Box，例如：<a href="http://www.vagrantbox.es/">Vagrantbox.es</a>，不过使用起来得手动添加 Box 的地址，参考下面的命令：<br>
+        
+          <p class="article-more-link">
+            <a href="/2016/03/30/ansible-workshop-vagrant-virtualbox/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://maxpeng.vipcloud.me/2016/03/30/ansible-workshop-vagrant-virtualbox/" data-id="ciw7sqq7u00053qccgdkt4es3" class="article-share-link">分享</a>
+
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ansible/">Ansible</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vagrant/">Vagrant</a></li></ul>
+
+
+      <div class="tip-container">
+        <div id="ciw7sqq7u00053qccgdkt4es3" class="article-tip-box">
+          <div class="payment-method">
+            <label for="tip-alipay" class="article-tip-select" data-method="alipay">
+              <input id="tip-alipay" name="tip" type="radio" checked/>
+              支付宝
+            </label>
+            <label for="tip-wechat" class="article-tip-select" data-method="wechat">
+              <input id="tip-wechat" name="tip" type="radio"/>
+              微信
+            </label>
+          </div>
+          <img id="alipay" src="/imgs/alipay.png">
+          <img id="wechat" class="hidden" src="/imgs/wechat.png">
+        </div>
+      </div>
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article data-post-id="ciw7sqq7y00093qccce4jgzil" id="post-communication-between-multiple-angular-apps" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/01/31/communication-between-multiple-angular-apps/" class="article-date">
   <time datetime="2016-01-31T14:15:32.000Z" itemprop="datePublished">Jan 31 2016</time>
@@ -107,7 +186,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://maxpeng.vipcloud.me/2016/01/31/communication-between-multiple-angular-apps/" data-id="ciw7juqdj0007njccs7dezjob" class="article-share-link">分享</a>
+      <a data-url="http://maxpeng.vipcloud.me/2016/01/31/communication-between-multiple-angular-apps/" data-id="ciw7sqq7y00093qccce4jgzil" class="article-share-link">分享</a>
 
       
 
@@ -116,7 +195,7 @@
 
 
       <div class="tip-container">
-        <div id="ciw7juqdj0007njccs7dezjob" class="article-tip-box">
+        <div id="ciw7sqq7y00093qccce4jgzil" class="article-tip-box">
           <div class="payment-method">
             <label for="tip-alipay" class="article-tip-select" data-method="alipay">
               <input id="tip-alipay" name="tip" type="radio" checked/>
@@ -139,7 +218,7 @@
 
 
   
-    <article data-post-id="ciw7juqdi0005njcca00foyhm" id="post-becoming-a-javascript-ninja" class="article article-type-post" itemscope itemprop="blogPost">
+    <article data-post-id="ciw7sqq7v00073qccv4qfryrd" id="post-becoming-a-javascript-ninja" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/01/16/becoming-a-javascript-ninja/" class="article-date">
   <time datetime="2016-01-16T02:13:29.000Z" itemprop="datePublished">Jan 16 2016</time>
@@ -180,7 +259,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://maxpeng.vipcloud.me/2016/01/16/becoming-a-javascript-ninja/" data-id="ciw7juqdi0005njcca00foyhm" class="article-share-link">分享</a>
+      <a data-url="http://maxpeng.vipcloud.me/2016/01/16/becoming-a-javascript-ninja/" data-id="ciw7sqq7v00073qccv4qfryrd" class="article-share-link">分享</a>
 
       
 
@@ -189,7 +268,7 @@
 
 
       <div class="tip-container">
-        <div id="ciw7juqdi0005njcca00foyhm" class="article-tip-box">
+        <div id="ciw7sqq7v00073qccv4qfryrd" class="article-tip-box">
           <div class="payment-method">
             <label for="tip-alipay" class="article-tip-select" data-method="alipay">
               <input id="tip-alipay" name="tip" type="radio" checked/>
@@ -212,7 +291,7 @@
 
 
   
-    <article data-post-id="ciw7juqdr000bnjcchs1ncy73" id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article data-post-id="ciw7sqq80000a3qcci7fxkn5d" id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/01/03/hello-world/" class="article-date">
   <time datetime="2016-01-03T02:13:29.000Z" itemprop="datePublished">Jan 3 2016</time>
@@ -246,14 +325,14 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://maxpeng.vipcloud.me/2016/01/03/hello-world/" data-id="ciw7juqdr000bnjcchs1ncy73" class="article-share-link">分享</a>
+      <a data-url="http://maxpeng.vipcloud.me/2016/01/03/hello-world/" data-id="ciw7sqq80000a3qcci7fxkn5d" class="article-share-link">分享</a>
 
       
 
       
 
       <div class="tip-container">
-        <div id="ciw7juqdr000bnjcchs1ncy73" class="article-tip-box">
+        <div id="ciw7sqq80000a3qcci7fxkn5d" class="article-tip-box">
           <div class="payment-method">
             <label for="tip-alipay" class="article-tip-select" data-method="alipay">
               <input id="tip-alipay" name="tip" type="radio" checked/>
@@ -313,6 +392,10 @@
       <ul>
         
           <li>
+            <a href="/2016/12/02/Use-a-Content-Delivery-Network/">前端性能调优(2) ┃ 使用 CDN</a>
+          </li>
+        
+          <li>
             <a href="/2016/12/02/Minimize-HTTP-Requests/">前端性能调优(1) ┃ 尽可能减少 HTTP 请求</a>
           </li>
         
@@ -328,10 +411,6 @@
             <a href="/2016/06/21/learn-es6-in-30-minutes/">ES6 30 分钟入门教程</a>
           </li>
         
-          <li>
-            <a href="/2016/03/30/ansible-workshop-vagrant-virtualbox/">操练 Ansible 之准备环境</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -341,7 +420,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/">Tools</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/Performance/">Performance</a><span class="category-list-count">1</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/">Tools</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/Performance/">Performance</a><span class="category-list-count">2</span></li></ul></li></ul>
     </div>
   </div>
 
@@ -351,7 +430,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AngularJS/">AngularJS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ansible/">Ansible</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Best-Practice/">Best Practice</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/">ES6</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SCSS/">SCSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sass/">Sass</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Skype/">Skype</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vagrant/">Vagrant</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/翻译/">翻译</a><span class="tag-list-count">3</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AngularJS/">AngularJS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ansible/">Ansible</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Best-Practice/">Best Practice</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/">ES6</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SCSS/">SCSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sass/">Sass</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Skype/">Skype</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vagrant/">Vagrant</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/翻译/">翻译</a><span class="tag-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -361,7 +440,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
