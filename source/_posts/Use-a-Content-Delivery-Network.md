@@ -4,7 +4,7 @@ date: 2016-12-02 17:31:47
 tags: [Best Practice, 翻译]
 categories: [Web, Performance]
 ---
-<img src="/imgs/cdn.jpg" width="100%">
+<img src="/imgs/cdn.png" width="100%">
 
 > *原文链接：[https://developer.yahoo.com/performance/rules.html#cdn](https://developer.yahoo.com/performance/rules.html#cdn)*
 
