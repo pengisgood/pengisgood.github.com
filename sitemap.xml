@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://maxpeng.vipcloud.me/2016/01/16/becoming-a-javascript-ninja/</loc>
+    
+    <lastmod>2016-12-02T08:43:33.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://maxpeng.vipcloud.me/2016/08/11/What%E2%80%99s-the-Difference-Between-Sass-and-SCSS/</loc>
     
-    <lastmod>2016-12-01T17:21:53.000Z</lastmod>
+    <lastmod>2016-12-02T08:43:03.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://maxpeng.vipcloud.me/2016/12/02/Minimize-HTTP-Requests/</loc>
+    
+    <lastmod>2016-12-02T08:42:20.000Z</lastmod>
     
   </url>
   
@@ -19,13 +33,6 @@
     <loc>http://maxpeng.vipcloud.me/2016/01/31/communication-between-multiple-angular-apps/</loc>
     
     <lastmod>2016-12-01T17:21:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://maxpeng.vipcloud.me/2016/01/16/becoming-a-javascript-ninja/</loc>
-    
-    <lastmod>2016-12-01T17:21:31.000Z</lastmod>
     
   </url>
   
