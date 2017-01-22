@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://maxpeng.vipcloud.me/2016/12/15/gzip-components/</loc>
+    
+    <lastmod>2017-01-22T06:39:31.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://maxpeng.vipcloud.me/2016/12/13/add-an-expires-or-a-cache-control-header/</loc>
     
     <lastmod>2016-12-15T10:46:12.000Z</lastmod>

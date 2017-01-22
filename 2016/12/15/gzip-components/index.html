@@ -10,44 +10,26 @@
   <link rel="search" type="application/opensearchdescription+xml" href="http://maxpeng.vipcloud.me/opensearch.xml" title="Blog Search" />
 
   
-  <title>操练 Ansible 之准备环境 | 谋事在人，成事在天</title>
+  <title>前端性能调优(4) ┃ Gzip 压缩 | 谋事在人，成事在天</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="工欲善其事，必先利其器。在正式开始操练 Ansible 之前，我们得准备好相应的环境，安装一些软件：
+  <meta name="description" content="原文链接：https://developer.yahoo.com/performance/rules.html#gzip
 
-Vagrant
-VirtualBox
-Ansible
-
-1. 安装虚拟机安装好 VirtualBox 之后，我们需要在里面安装一台 Linux 的虚拟机，为了能够很方便的创建和配置虚拟机，我们可以让 Vagrant 来帮助我们。
-当这两样都安装好之后，开始使用 Vagrant 安装虚拟机。一般">
+通过网络传输 HTTP 请求和响应所需的时间可以根据前端工程师做出的决定大大减少。的确，终端用户的带宽速度、互联网服务提供商、对等交换点的距离等都超出了开发团队的控制范围。但还有其他影响响应时间的变量。压缩通过减少 HTTP 响应的大小来减少响应时间。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="操练 Ansible 之准备环境">
-<meta property="og:url" content="http://maxpeng.vipcloud.me/2016/03/30/ansible-workshop-vagrant-virtualbox/index.html">
+<meta property="og:title" content="前端性能调优(4) ┃ Gzip 压缩">
+<meta property="og:url" content="http://maxpeng.vipcloud.me/2016/12/15/gzip-components/index.html">
 <meta property="og:site_name" content="谋事在人，成事在天">
-<meta property="og:description" content="工欲善其事，必先利其器。在正式开始操练 Ansible 之前，我们得准备好相应的环境，安装一些软件：
+<meta property="og:description" content="原文链接：https://developer.yahoo.com/performance/rules.html#gzip
 
-Vagrant
-VirtualBox
-Ansible
-
-1. 安装虚拟机安装好 VirtualBox 之后，我们需要在里面安装一台 Linux 的虚拟机，为了能够很方便的创建和配置虚拟机，我们可以让 Vagrant 来帮助我们。
-当这两样都安装好之后，开始使用 Vagrant 安装虚拟机。一般">
-<meta property="og:image" content="http://maxpeng.vipcloud.me/imgs/knives.jpg">
-<meta property="og:image" content="http://maxpeng.vipcloud.me/imgs/forward-port.jpg">
-<meta property="og:image" content="http://maxpeng.vipcloud.me/imgs/vagrant-command.png">
-<meta property="og:image" content="http://maxpeng.vipcloud.me/imgs/ansible-command-args.png">
-<meta property="og:updated_time" content="2016-08-12T06:44:05.000Z">
+通过网络传输 HTTP 请求和响应所需的时间可以根据前端工程师做出的决定大大减少。的确，终端用户的带宽速度、互联网服务提供商、对等交换点的距离等都超出了开发团队的控制范围。但还有其他影响响应时间的变量。压缩通过减少 HTTP 响应的大小来减少响应时间。">
+<meta property="og:image" content="http://maxpeng.vipcloud.me/imgs/gzip.png">
+<meta property="og:updated_time" content="2017-01-22T06:39:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="操练 Ansible 之准备环境">
-<meta name="twitter:description" content="工欲善其事，必先利其器。在正式开始操练 Ansible 之前，我们得准备好相应的环境，安装一些软件：
+<meta name="twitter:title" content="前端性能调优(4) ┃ Gzip 压缩">
+<meta name="twitter:description" content="原文链接：https://developer.yahoo.com/performance/rules.html#gzip
 
-Vagrant
-VirtualBox
-Ansible
-
-1. 安装虚拟机安装好 VirtualBox 之后，我们需要在里面安装一台 Linux 的虚拟机，为了能够很方便的创建和配置虚拟机，我们可以让 Vagrant 来帮助我们。
-当这两样都安装好之后，开始使用 Vagrant 安装虚拟机。一般">
-<meta name="twitter:image" content="http://maxpeng.vipcloud.me/imgs/knives.jpg">
+通过网络传输 HTTP 请求和响应所需的时间可以根据前端工程师做出的决定大大减少。的确，终端用户的带宽速度、互联网服务提供商、对等交换点的距离等都超出了开发团队的控制范围。但还有其他影响响应时间的变量。压缩通过减少 HTTP 响应的大小来减少响应时间。">
+<meta name="twitter:image" content="http://maxpeng.vipcloud.me/imgs/gzip.png">
 <meta name="twitter:creator" content="@pengisgood">
 <link rel="publisher" href="pengisgood">
   
@@ -94,14 +76,14 @@ Ansible
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article data-post-id="ciy8al9g400056c1kwfagb6na" id="post-ansible-workshop-vagrant-virtualbox" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article data-post-id="ciy8al9g500076c1kg341llts" id="post-gzip-components" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/03/30/ansible-workshop-vagrant-virtualbox/" class="article-date">
-  <time datetime="2016-03-30T15:12:59.000Z" itemprop="datePublished">Mar 30 2016</time>
+    <a href="/2016/12/15/gzip-components/" class="article-date">
+  <time datetime="2016-12-15T10:56:15.000Z" itemprop="datePublished">Dec 15 2016</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/DevOps/">DevOps</a>
+    <a class="article-category-link" href="/categories/Web/">Web</a>►<a class="article-category-link" href="/categories/Web/Performance/">Performance</a>
   </div>
 
   </div>
@@ -112,7 +94,7 @@ Ansible
         
   
     <h1 class="article-title" itemprop="name">
-      操练 Ansible 之准备环境
+      前端性能调优(4) ┃ Gzip 压缩
     </h1>
   
 
@@ -121,50 +103,49 @@ Ansible
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/imgs/knives.jpg" width="100%"></p>
-<p>工欲善其事，必先利其器。在正式开始操练 Ansible 之前，我们得准备好相应的环境，安装一些软件：</p>
-<ul>
-<li><a href="https://www.vagrantup.com/downloads.html" target="_blank" rel="external">Vagrant</a></li>
-<li><a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="external">VirtualBox</a></li>
-<li><a href="http://docs.ansible.com/ansible/intro_installation.html" target="_blank" rel="external">Ansible</a></li>
-</ul>
-<h2 id="1-安装虚拟机"><a href="#1-安装虚拟机" class="headerlink" title="1. 安装虚拟机"></a>1. 安装虚拟机</h2><p>安装好 VirtualBox 之后，我们需要在里面安装一台 Linux 的虚拟机，为了能够很方便的创建和配置虚拟机，我们可以让 Vagrant 来帮助我们。</p>
-<p>当这两样都安装好之后，开始使用 Vagrant 安装虚拟机。一般来说，有两种方式：在线安装和离线安装。</p>
-<h3 id="在线安装"><a href="#在线安装" class="headerlink" title="在线安装"></a>在线安装</h3><p>Vagrant 社区提供了很多主流的 Linux 发行版对应的 [Box]（<a href="https://atlas.hashicorp.com/boxes/search）。以" target="_blank" rel="external">https://atlas.hashicorp.com/boxes/search）。以</a> Ubuntu 为例，我们可以在前面的这个仓库中搜索到 <a href="https://atlas.hashicorp.com/ubuntu/boxes/trusty64" target="_blank" rel="external">Ubuntu/trusty64</a>，然后我们在命令行中执行以下命令即可开始在线安装。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant init ubuntu/trusty64</span><br><span class="line">$ vagrant up --provider virtualbox</span><br></pre></td></tr></table></figure>
-<p>除此之外，也有一些第三方玩家提供一些 Box，例如：<a href="http://www.vagrantbox.es/" target="_blank" rel="external">Vagrantbox.es</a>，不过使用起来得手动添加 Box 的地址，参考下面的命令：<br><a id="more"></a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant box add &#123;title&#125; &#123;url&#125;</span><br><span class="line">$ vagrant init &#123;title&#125;</span><br><span class="line">$ vagrant up</span><br></pre></td></tr></table></figure>
-<p>一般来说，一个 box 都有好几百兆，如果网络好的话，可以选这两种方式。</p>
-<h3 id="离线安装"><a href="#离线安装" class="headerlink" title="离线安装"></a>离线安装</h3><p>当然，生在红旗下，长在新中国的我们，不是每个人都有这么好的网络条件，那么这个时候离线安装似乎对我们来说更加有利。相信稍有经验的同学已经意识到在线安装的第二种方式稍加变形即可。假设我本地（~/Downloads/test.box）已经有一个 box 文件了，那么我可以下面的方式直接添加本地的 box。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant box add <span class="built_in">test</span>Box ~/Downloads/test.box</span><br><span class="line">$ vagrant init <span class="built_in">test</span>Box</span><br><span class="line">$ vagrant up</span><br></pre></td></tr></table></figure>
-<p>在执行完添加步骤之后，可以通过以下方式查看已经存在的 Box 列表：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant box list</span><br></pre></td></tr></table></figure>
-<p>如果你的网络条件不是很好，建议采用离线安装的方式。</p>
-<h2 id="2-配置虚拟机"><a href="#2-配置虚拟机" class="headerlink" title="2. 配置虚拟机"></a>2. 配置虚拟机</h2><p>在我们通过离线安装的过程中，完成 <code>vagrant box add testBox /path/to/box_name.box</code> 之后，可以通过 <code>vagrant box list</code> 查看已经添加的 box。然后可以让 Vagrant执行 <code>vagrant init testBox</code> 帮我们生成一个默认的配置文件，执行完之后打开当前目录下的 <code>Vagrantfile</code>，内容应该如下（注释已被省略）：</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Vagrant.configure(<span class="number">2</span>) <span class="keyword">do</span> <span class="params">|config|</span></span><br><span class="line">  config.vm.box = <span class="string">"testBox"</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<p>这里的 <code>testBox</code> 就是我们在执行 <code>vagrant init testBox</code> 时指定的名字。我们在用 Ansible 配置 Nginx 之前，需要先让虚拟机暴露80和443端口以便在 host 机器上能够访问，接下来我们将 host 机器上的8080和8443分别 forward 到 guest 机器（也就是我们用 vagrant 启动的虚拟机）的80和443端口上。如下图所示。<br><img src="/imgs/forward-port.jpg" alt=""></p>
-<p>为了达到这个效果，最终只需要在 Vagrantfile 中添加两行配置即可，如下：</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Vagrant.configure(<span class="number">2</span>) <span class="keyword">do</span> <span class="params">|config|</span></span><br><span class="line">  config.vm.box = <span class="string">"testBox"</span></span><br><span class="line">  config.vm.network <span class="string">"forwarded_port"</span>, <span class="symbol">guest:</span> <span class="number">80</span>, <span class="symbol">host:</span> <span class="number">8080</span></span><br><span class="line">  config.vm.network <span class="string">"forwarded_port"</span>, <span class="symbol">guest:</span> <span class="number">443</span>, <span class="symbol">host:</span> <span class="number">8443</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<p>完成修改后，需要执行如下操作来告诉 Vagrant 让配置生效：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant reload</span><br></pre></td></tr></table></figure>
-<h2 id="3-附录"><a href="#3-附录" class="headerlink" title="3. 附录"></a>3. 附录</h2><h3 id="Vagrant"><a href="#Vagrant" class="headerlink" title="Vagrant"></a>Vagrant</h3><p>Vagrant 的常用命令如下图所示：<br><img src="/imgs/vagrant-command.png" alt=""></p>
-<h3 id="Ansible"><a href="#Ansible" class="headerlink" title="Ansible"></a>Ansible</h3><p>Ansible 命令的基本参数如下图所示：<br><img src="/imgs/ansible-command-args.png" alt=""></p>
+        <p><img src="/imgs/gzip.png" width="100%"></p>
+<blockquote>
+<p><em>原文链接：<a href="https://developer.yahoo.com/performance/rules.html#gzip" target="_blank" rel="external">https://developer.yahoo.com/performance/rules.html#gzip</a></em></p>
+</blockquote>
+<p>通过网络传输 HTTP 请求和响应所需的时间可以根据前端工程师做出的决定大大减少。的确，终端用户的带宽速度、互联网服务提供商、对等交换点的距离等都超出了开发团队的控制范围。但还有其他影响响应时间的变量。压缩通过减少 HTTP 响应的大小来减少响应时间。</p>
+<a id="more"></a>
+<p>从 HTTP/1.1 开始，Web 客户端在 HTTP 请求中的 <code>Accept-Encoding</code> 头中指定是否支持压缩。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Accept-Encoding: gzip, deflate</span><br></pre></td></tr></table></figure>
+<p>如果 Web 服务器在请求中看到此标头，它可以使用客户端列出的方法之一来压缩响应。Web 服务器通过响应中的 <code>Content-Encoding</code> 头来通知 Web 客户端。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Content-Encoding: gzip</span><br></pre></td></tr></table></figure>
+<p>Gzip 是目前最流行和最有效的压缩方法。它是由 GNU 项目开发的，并在 <a href="http://www.ietf.org/rfc/rfc1952.txt" target="_blank" rel="external">RFC 1952</a> 中标准化。你可能看到的唯一其他压缩格式是 <code>deflate</code>，但它的效率较低且没有那么流行。</p>
+<p>Gzip 通常将响应大小减小约70％。目前浏览器中大约90％的互联网流量声称支持 gzip。如果使用 Apache，那么配置 gzip 的模块取决于你的版本：Apache 1.3 使用 <a href="https://sourceforge.net/projects/mod-gzip/" target="_blank" rel="external">mod_gzip</a>，而Apache 2.x 使用 <a href="http://httpd.apache.org/docs/2.0/mod/mod_deflate.html" target="_blank" rel="external">mod_deflate</a>。</p>
+<p>有一些已知的浏览器和代理问题，可能导致浏览器期望的内容与接收到的压缩内容不匹配。幸运的是，这些边缘情况随着旧版浏览器的使用率下降正在逐渐减少。Apache 模块也会自动添加适当的 <code>Vary</code> 响应头来帮助解决这些问题。</p>
+<p>服务器根据文件类型选择 gzip 的内容，但是它们决定压缩的内容通常太受限制。大多数网站 gzip 它们的 HTML 文档。还有一点值得 gzip 的是脚本和样式表，但许多网站错过了这个机会。事实上，压缩任何文本响应，包括 XML 和 JSON 都是值得压缩的。<strong>图像和 PDF 文件不应该 gzip，因为它们已经压缩过了</strong>。尝试 gzip 它们不仅浪费 CPU，还有可能增加文件大小。</p>
+<p>Gzip 尽可能多的文件类型是减少页面重量和加快用户体验的简单方法。</p>
+<h2 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h2><blockquote>
+<h3 id="Gzip-Components"><a href="#Gzip-Components" class="headerlink" title="Gzip Components"></a>Gzip Components</h3><p>tag: server</p>
+<p>The time it takes to transfer an HTTP request and response across the network can be significantly reduced by decisions made by front-end engineers. It’s true that the end-user’s bandwidth speed, Internet service provider, proximity to peering exchange points, etc. are beyond the control of the development team. But there are other variables that affect response times. Compression reduces response times by reducing the size of the HTTP response.</p>
+<p>Starting with HTTP/1.1, web clients indicate support for compression with the Accept-Encoding header in the HTTP request.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Accept-Encoding: gzip, deflate</span><br></pre></td></tr></table></figure>
+<p>If the web server sees this header in the request, it may compress the response using one of the methods listed by the client. The web server notifies the web client of this via the Content-Encoding header in the response.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Content-Encoding: gzip</span><br></pre></td></tr></table></figure></p>
+<p>Gzip is the most popular and effective compression method at this time. It was developed by the GNU project and standardized by <a href="http://www.ietf.org/rfc/rfc1952.txt" target="_blank" rel="external">RFC 1952</a>. The only other compression format you’re likely to see is deflate, but it’s less effective and less popular.</p>
+<p>Gzipping generally reduces the response size by about 70%. Approximately 90% of today’s Internet traffic travels through browsers that claim to support gzip. If you use Apache, the module configuring gzip depends on your version: Apache 1.3 uses <a href="https://sourceforge.net/projects/mod-gzip/" target="_blank" rel="external">mod_gzip</a> while Apache 2.x uses <a href="http://httpd.apache.org/docs/2.0/mod/mod_deflate.html" target="_blank" rel="external">mod_deflate</a>.</p>
+<p>There are known issues with browsers and proxies that may cause a mismatch in what the browser expects and what it receives with regard to compressed content. Fortunately, these edge cases are dwindling as the use of older browsers drops off. The Apache modules help out by adding appropriate Vary response headers automatically.</p>
+<p>Servers choose what to gzip based on file type, but are typically too limited in what they decide to compress. Most web sites gzip their HTML documents. It’s also worthwhile to gzip your scripts and stylesheets, but many web sites miss this opportunity. In fact, it’s worthwhile to compress any text response including XML and JSON. Image and PDF files should not be gzipped because they are already compressed. Trying to gzip them not only wastes CPU but can potentially increase file sizes.</p>
+<p>Gzipping as many file types as possible is an easy way to reduce page weight and accelerate the user experience.</p>
+</blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://maxpeng.vipcloud.me/2016/03/30/ansible-workshop-vagrant-virtualbox/" data-id="ciy8al9g400056c1kwfagb6na" class="article-share-link">分享</a>
+      <a data-url="http://maxpeng.vipcloud.me/2016/12/15/gzip-components/" data-id="ciy8al9g500076c1kg341llts" class="article-share-link">分享</a>
 
       
         <a class="article-tip-link">打赏</a>
       
 
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ansible/">Ansible</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vagrant/">Vagrant</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Best-Practice/">Best Practice</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/翻译/">翻译</a></li></ul>
 
 
       <div class="tip-container">
-        <div id="ciy8al9g400056c1kwfagb6na" class="article-tip-box">
+        <div id="ciy8al9g500076c1kg341llts" class="article-tip-box">
           <div class="payment-method">
             <label for="tip-alipay" class="article-tip-select" data-method="alipay">
               <input id="tip-alipay" name="tip" type="radio" checked/>
@@ -185,19 +166,10 @@ Ansible
     
 <nav id="article-nav">
   
-    <a href="/2016/06/21/learn-es6-in-30-minutes/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          ES6 30 分钟入门教程
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/01/31/communication-between-multiple-angular-apps/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/12/13/add-an-expires-or-a-cache-control-header/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">多个 ng-app 中 Controllers &amp; Services 之间的通信</div>
+      <div class="article-nav-title">前端性能调优(3) ┃ 添加 Expires 或者 Cache-Control 头</div>
     </a>
   
 </nav>
@@ -210,7 +182,7 @@ Ansible
 
   
     <section id="comments">
-      <div class="ds-thread" data-thread-key="post-ansible-workshop-vagrant-virtualbox" data-title="操练 Ansible 之准备环境" data-url="http://maxpeng.vipcloud.me/2016/03/30/ansible-workshop-vagrant-virtualbox/"></div>
+      <div class="ds-thread" data-thread-key="post-gzip-components" data-title="前端性能调优(4) ┃ Gzip 压缩" data-url="http://maxpeng.vipcloud.me/2016/12/15/gzip-components/"></div>
     </section>
   
 
