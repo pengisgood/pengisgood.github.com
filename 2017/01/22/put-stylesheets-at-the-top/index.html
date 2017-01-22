@@ -10,17 +10,26 @@
   <link rel="search" type="application/opensearchdescription+xml" href="http://maxpeng.vipcloud.me/opensearch.xml" title="Blog Search" />
 
   
-  <title>Archives: 2016/8 | 谋事在人，成事在天</title>
+  <title>前端性能调优(5) ┃ 将 Stylesheets 放在顶部 | 谋事在人，成事在天</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="立志成为全栈工程师一线码农的学习笔记，乐于与大家分享探讨技术话题。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="谋事在人，成事在天">
-<meta property="og:url" content="http://maxpeng.vipcloud.me/archives/2016/08/index.html">
+  <meta name="description" content="原文链接：https://developer.yahoo.com/performance/rules.html#css_top
+
+在 Yahoo！ 研究性能时，我们发现将样式表移动到文档 HEAD 使页面加载得更快。这是因为在 HEAD 中放置样式表允许页面渐进式地渲染。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端性能调优(5) ┃ 将 Stylesheets 放在顶部">
+<meta property="og:url" content="http://maxpeng.vipcloud.me/2017/01/22/put-stylesheets-at-the-top/index.html">
 <meta property="og:site_name" content="谋事在人，成事在天">
-<meta property="og:description" content="立志成为全栈工程师一线码农的学习笔记，乐于与大家分享探讨技术话题。">
+<meta property="og:description" content="原文链接：https://developer.yahoo.com/performance/rules.html#css_top
+
+在 Yahoo！ 研究性能时，我们发现将样式表移动到文档 HEAD 使页面加载得更快。这是因为在 HEAD 中放置样式表允许页面渐进式地渲染。">
+<meta property="og:image" content="http://maxpeng.vipcloud.me/imgs/stylesheet.jpg">
+<meta property="og:updated_time" content="2017-01-22T07:25:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="谋事在人，成事在天">
-<meta name="twitter:description" content="立志成为全栈工程师一线码农的学习笔记，乐于与大家分享探讨技术话题。">
+<meta name="twitter:title" content="前端性能调优(5) ┃ 将 Stylesheets 放在顶部">
+<meta name="twitter:description" content="原文链接：https://developer.yahoo.com/performance/rules.html#css_top
+
+在 Yahoo！ 研究性能时，我们发现将样式表移动到文档 HEAD 使页面加载得更快。这是因为在 HEAD 中放置样式表允许页面渐进式地渲染。">
+<meta name="twitter:image" content="http://maxpeng.vipcloud.me/imgs/stylesheet.jpg">
 <meta name="twitter:creator" content="@pengisgood">
 <link rel="publisher" href="pengisgood">
   
@@ -67,39 +76,116 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/08/11/What’s-the-Difference-Between-Sass-and-SCSS/" class="archive-article-date">
-  <time datetime="2016-08-11T08:51:37.000Z" itemprop="datePublished">Aug 11</time>
+        <section id="main"><article data-post-id="ciy8c9n9a000stx1k60ccmh4s" id="post-put-stylesheets-at-the-top" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/22/put-stylesheets-at-the-top/" class="article-date">
+  <time datetime="2017-01-22T06:44:15.000Z" itemprop="datePublished">Jan 22 2017</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Web/">Web</a>►<a class="article-category-link" href="/categories/Web/Performance/">Performance</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/11/What’s-the-Difference-Between-Sass-and-SCSS/">Sass 和 SCSS 到底是什么关系？</a>
+    <h1 class="article-title" itemprop="name">
+      前端性能调优(5) ┃ 将 Stylesheets 放在顶部
     </h1>
   
 
-    </header>
+        <div class="views">0</div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/imgs/stylesheet.jpg" width="100%"></p>
+<blockquote>
+<p><em>原文链接：<a href="https://developer.yahoo.com/performance/rules.html#css_top" target="_blank" rel="external">https://developer.yahoo.com/performance/rules.html#css_top</a></em></p>
+</blockquote>
+<p>在 Yahoo！ 研究性能时，我们发现将样式表移动到文档 HEAD 使页面加载得更快。这是因为在 HEAD 中放置样式表允许页面渐进式地渲染。</p>
+<a id="more"></a>
+<p>关注性能的前端工程师想要页面渐进式地渲染，也就是说，我们希望浏览器尽快显示它所拥有的任何内容。这对于具有大量内容的网页和用户的网络较慢时尤其重要。给予用户视觉反馈的重要性已经被很好地研究和<a href="https://www.nngroup.com/articles/response-times-3-important-limits/" target="_blank" rel="external">记录</a>过了，例如进度指示器。在我们的例子中，HTML 页面是进度指示器！当浏览器逐渐加载页面时，页眉，导航栏，顶部的标志等都用作对等待页面的用户的视觉反馈。这提高了整体用户体验。</p>
+<p>将样式表放在文档底部附近的问题是它禁止了许多浏览器（包括 Internet Explorer）中进行渐进式渲染。这些浏览器阻止渲染，以避免如果页面的样式发生变化导致的不得不重绘页面的元素。用户会被卡住，一直看着空白页。</p>
+<p><a href="https://www.w3.org/TR/html4/struct/links.html#h-12.3" target="_blank" rel="external">HTML 规范</a>清楚地说明样式表将被包括在页面的 HEAD 中：“与 A 不同，[LINK] 只能出现在文档的 HEAD 部分，尽管它可能出现任意次数。无论是空白的白色屏幕还是闪现的没有样式的内容，都不是值得冒风险的替代方案。最佳解决方案是遵循 HTML 规范并在文档 HEAD 中加载样式表。</p>
+<h2 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h2><blockquote>
+<h3 id="Put-Stylesheets-at-the-Top"><a href="#Put-Stylesheets-at-the-Top" class="headerlink" title="Put Stylesheets at the Top"></a>Put Stylesheets at the Top</h3><p>tag: css</p>
+<p>While researching performance at Yahoo!, we discovered that moving stylesheets to the document HEAD makes pages appear to be loading faster. This is because putting stylesheets in the HEAD allows the page to render progressively.</p>
+<p>Front-end engineers that care about performance want a page to load progressively; that is, we want the browser to display whatever content it has as soon as possible. This is especially important for pages with a lot of content and for users on slower Internet connections. The importance of giving users visual feedback, such as progress indicators, has been well researched and <a href="https://www.nngroup.com/articles/response-times-3-important-limits/" target="_blank" rel="external">documented</a>. In our case the HTML page is the progress indicator! When the browser loads the page progressively the header, the navigation bar, the logo at the top, etc. all serve as visual feedback for the user who is waiting for the page. This improves the overall user experience.</p>
+<p>The problem with putting stylesheets near the bottom of the document is that it prohibits progressive rendering in many browsers, including Internet Explorer. These browsers block rendering to avoid having to redraw elements of the page if their styles change. The user is stuck viewing a blank white page.</p>
+<p>The <a href="https://www.w3.org/TR/html4/struct/links.html#h-12.3" target="_blank" rel="external">HTML specification</a> clearly states that stylesheets are to be included in the HEAD of the page: “Unlike A, [LINK] may only appear in the HEAD section of a document, although it may appear any number of times.” Neither of the alternatives, the blank white screen or flash of unstyled content, are worth the risk. The optimal solution is to follow the HTML specification and load your stylesheets in the document HEAD.</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://maxpeng.vipcloud.me/2017/01/22/put-stylesheets-at-the-top/" data-id="ciy8c9n9a000stx1k60ccmh4s" class="article-share-link">分享</a>
+
+      
+        <a class="article-tip-link">打赏</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Best-Practice/">Best Practice</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/翻译/">翻译</a></li></ul>
+
+
+      <div class="tip-container">
+        <div id="ciy8c9n9a000stx1k60ccmh4s" class="article-tip-box">
+          <div class="payment-method">
+            <label for="tip-alipay" class="article-tip-select" data-method="alipay">
+              <input id="tip-alipay" name="tip" type="radio" checked/>
+              支付宝
+            </label>
+            <label for="tip-wechat" class="article-tip-select" data-method="wechat">
+              <input id="tip-wechat" name="tip" type="radio"/>
+              微信
+            </label>
+          </div>
+          <img id="alipay" src="/imgs/alipay.png">
+          <img id="wechat" class="hidden" src="/imgs/wechat.png">
+        </div>
+      </div>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/12/15/gzip-components/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">前端性能调优(4) ┃ Gzip 压缩</div>
+    </a>
+  
+</nav>
+
+  
 </article>
+
+
+  <ul class="ds-recent-visitors"></ul>
+
   
+    <section id="comments">
+      <div class="ds-thread" data-thread-key="post-put-stylesheets-at-the-top" data-title="前端性能调优(5) ┃ 将 Stylesheets 放在顶部" data-url="http://maxpeng.vipcloud.me/2017/01/22/put-stylesheets-at-the-top/"></div>
+    </section>
   
-    </div></section>
-  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:'pengisgood'};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+       || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
 </section>
         
@@ -239,6 +325,36 @@
     // 初始化
     AV.init({appId: APP_ID, appKey: APP_KEY});
 
+    
+    var query = new AV.Query('PageView');
+    var postId = $('article').data('postId');
+    var postSlug = $('article').attr('id');
+
+    query.equalTo('postSlug', postSlug);
+    query.first().then(function (pageView) {
+      if (pageView) {
+        increasePageView(pageView);
+      } else {
+        var PageView = AV.Object.extend('PageView');
+        var pageView = new PageView();
+        pageView.save({
+          postId: postId,
+          postSlug: postSlug,
+          views: 0
+        }).then(function (pageView) {
+          increasePageView(pageView);
+        })
+      }
+    }, function (error) {
+    });
+
+    function increasePageView(pageView) {
+      pageView.increment('views', 1);
+      pageView.fetchWhenSave(true);
+      pageView.save().then(function (pageView) {
+        updatePageView(pageView)
+      });
+    }
     
 
     function updatePageView(pageView) {
